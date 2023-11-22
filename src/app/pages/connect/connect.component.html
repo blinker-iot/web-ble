@@ -1,10 +1,32 @@
-<div>
-    <div>openjumper logo</div>
-    <div>蓝牙物联网-教育版</div>
-
-    <div>请先连接你的蓝牙设备</div>
-    <button (click)="search()">连接设备</button>
-    <div><a>使用说明</a></div>
-    <div>广告图</div>
-    <div>powered by DianDeng Tech</div>
+<div class="page">
+    <div class="logo-box"><img src="assets/diandeng-logo.png" alt=""></div>
+    <div class="text">蓝牙物联网-教育版</div>
+    <div class="connect-box">
+        <div class="text">请先连接你的蓝牙设备</div>
+        <button class="connect-btn" (click)="search()">连接设备</button>
+    </div>
+    <div class="help"><a>?</a></div>
+    <div class="btn-box">
+        <div>
+            <div class="icon-box"></div>
+            LED控制
+        </div>
+        <div>
+            <div class="icon-box"></div>
+            小车遥控器
+        </div>
+        <div>
+            <div class="icon-box"></div>
+            智能家居
+        </div>
+        <div>
+            <div class="icon-box"></div>
+            智慧农场
+        </div>
+    </div>
+    <div class="add">
+        <div class="text"></div>
+        <img src="https://arduino.me/assets/notice/r4.webp" alt="">
+    </div>
+    <div class="footer">powered by DianDeng Tech</div>
 </div>

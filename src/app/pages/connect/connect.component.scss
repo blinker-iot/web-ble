@@ -1,0 +1,90 @@
+.page {
+    padding: 24px 15px 0 15px;
+    position: relative;
+    height: calc(100% - 24px);
+    width: calc(100% - 30px);
+
+    .footer {
+        position: absolute;
+        width: calc(100% - 30px);
+        bottom: 15px;
+        text-align: center;
+    }
+}
+
+.logo-box {
+    padding-top: 25px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    img {
+        width: 75%;
+    }
+}
+
+.text {
+    font-size: 12px;
+    text-align: center;
+}
+
+.connect-btn {
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+}
+
+.help {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-box{
+    margin-top: 50px;
+    .connect-btn{
+        margin: 10px 0;
+    }
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 50px;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .icon-box {
+            height: 30px;
+            width: 30px;
+            background: #FFF;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.add {
+    position: absolute;
+    width: calc(100% - 30px);
+    // height: 100px;
+    bottom: 45px;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+}

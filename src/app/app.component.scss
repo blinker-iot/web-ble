@@ -1,0 +1,27 @@
+.phone-box {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    .phone-box {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 450px;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        margin-left: 26px;
+        margin-top: 31px;
+        background-color: #efefef;
+        border: 1px solid red;
+        width: 307px;
+        height: 663px;
+    }
+}
