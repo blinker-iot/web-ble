@@ -1,7 +1,7 @@
 .page {
     padding: 24px 15px 0 15px;
     position: relative;
-    height: calc(100% - 24px);
+    height: calc(100vh - 24px);
     width: calc(100% - 30px);
 
     .footer {
@@ -9,6 +9,17 @@
         width: calc(100% - 30px);
         bottom: 15px;
         text-align: center;
+        color: #808080;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            height: 30px;
+            margin-left: -34px;
+        }
     }
 }
 
@@ -19,7 +30,7 @@
     text-align: center;
 
     img {
-        width: 75%;
+        width: 90%;
     }
 }
 
@@ -45,17 +56,25 @@
     align-items: center;
 }
 
-.connect-box{
+.connect-box {
     margin-top: 50px;
-    .connect-btn{
-        margin: 10px 0;
+
+    .connect-btn {
+        margin: 11px 0;
+        background: rgb(102, 176, 255);
+        border: none;
+        color: #FFF;
+
+        &:hover {
+            background: rgb(150, 200, 255);
+        }
     }
 }
 
 .btn-box {
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 50px;
 
     >div {
@@ -65,10 +84,12 @@
         align-items: center;
 
         .icon-box {
-            height: 30px;
-            width: 30px;
+            height: 44px;
+            width: 44px;
             background: #FFF;
             margin-bottom: 7px;
+            box-shadow: 0 0 5px #CCC;
+            border-radius: 5px;
         }
     }
 }
@@ -76,9 +97,7 @@
 .add {
     position: absolute;
     width: calc(100% - 30px);
-    // height: 100px;
-    bottom: 45px;
-    background: #FFF;
+    bottom: 75px;
     display: flex;
     justify-content: center;
     align-items: center;

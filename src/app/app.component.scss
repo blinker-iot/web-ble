@@ -19,9 +19,15 @@
     .content {
         margin-left: 26px;
         margin-top: 31px;
-        background-color: #efefef;
+        background-color: #fafafa;
         border: 1px solid red;
         width: 307px;
         height: 663px;
+
+        ::ng-deep{
+            .page {
+                height: calc(100% - 24px);
+            }
+        }
     }
 }
