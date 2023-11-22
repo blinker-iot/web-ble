@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BleService } from '../../ble.service';
+import { SerialService } from '../../serial.service';
 
 @Component({
   selector: 'app-connect',
@@ -11,10 +12,12 @@ import { BleService } from '../../ble.service';
 })
 export class ConnectComponent {
   constructor(
-    private bleService: BleService
+    private bleService: BleService,
+    // private serialService: SerialService
   ) { }
 
   search() {
     this.bleService.searchDevice();
+    // this.serialService.searchDevice();
   }
 }
