@@ -20,11 +20,14 @@ export class BleService {
 
   searchDevice() {
     bluetooth.requestDevice({
-      acceptAllDevices: true,
-      optionalServices: [this.serviceUUID]
+      // acceptAllDevices: true,
+      optionalServices: [this.serviceUUID],
+      filters: [ { services: [this.serviceUUID] }]
     })
       .then(device => {
         this.device = device;
+        console.log(this.device);
+        console.log(this.device.name);
         return device.gatt.connect();
       })
       .then(server => {
