@@ -1,0 +1,87 @@
+.page {
+    padding: 24px 15px 0 15px;
+    position: relative;
+    height: calc(100vh - 24px);
+    width: calc(100% - 30px);
+}
+
+@media screen and (max-width: 500px) {
+    .btn-box {
+        width: 60vw;
+        height: 60vw;
+        position: absolute;
+
+        &.left {
+            top: 80px;
+            left: 60px;
+        }
+
+        &.right {
+            bottom: 80px;
+            left: 60px;
+        }
+
+        .btn2 {
+            background-color: rgb(94, 220, 255);
+            border-radius: 50%;
+        }
+
+        .btn {
+            width: 20vw;
+            height: 20vw;
+            position: absolute;
+
+            transform: scale(1.1);
+
+            img {
+                width: 20vw;
+            }
+
+            &:first-child {
+                top: 20vw;
+                right: 0;
+
+                img {
+                    transform: rotate(-90deg);
+                    transform-origin: left bottom;
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                left: 20vw;
+
+                img {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+                right: 20vw;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            &:last-child {
+                top: 20vw;
+                left: 0;
+
+                img {
+                    transform: rotate(90deg);
+                    transform-origin: bottom right;
+                    position: absolute;
+                    bottom: 0;
+                    right: 100%;
+                }
+            }
+        }
+    }
+
+}

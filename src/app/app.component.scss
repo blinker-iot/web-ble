@@ -10,9 +10,20 @@
         left: 0;
         width: 450px;
         pointer-events: none;
+        z-index: 9;
 
         img {
             width: 100%;
+        }
+    }
+
+    .he {
+        transform-origin: left center;
+        transform: rotate(-90deg) translateY(50%);
+
+        &.content {
+            margin-left: 32px;
+            margin-top: 41px;
         }
     }
 
@@ -24,7 +35,7 @@
         width: 307px;
         height: 663px;
 
-        ::ng-deep{
+        ::ng-deep {
             .page {
                 height: calc(100% - 24px);
             }

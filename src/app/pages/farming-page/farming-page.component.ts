@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LineChartComponent } from '../../components/line-chart/line-chart.component';
+import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
 
 @Component({
   selector: 'app-farming-page',
   standalone: true,
-  imports: [CommonModule, LineChartComponent],
+  imports: [CommonModule, LineChartComponent,SettingBtnComponent],
   templateUrl: './farming-page.component.html',
   styleUrl: './farming-page.component.scss'
 })

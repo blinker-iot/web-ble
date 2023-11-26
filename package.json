@@ -20,6 +20,7 @@
     "@angular/router": "^17.0.0",
     "@angular/service-worker": "^17.0.0",
     "@types/web-bluetooth": "^0.0.20",
+    "hammerjs": "^2.0.8",
     "lightweight-charts": "^4.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

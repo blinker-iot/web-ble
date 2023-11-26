@@ -1,0 +1,20 @@
+<div class="setting-btn" (click)="turnMenu()">
+    <i class="fa-duotone fa-gear"></i>
+</div>
+<div *ngIf="!hideMenu" class="menu animate__animated animate__fadeInDown">
+    <div [routerLink]="['/light']">
+        <i class="fa-duotone fa-gear"></i>
+    </div>
+    <div [routerLink]="['/joystick']">
+        <i class="fa-duotone fa-gear"></i>
+    </div>
+    <div [routerLink]="['/smarthome']">
+        <i class="fa-duotone fa-gear"></i>
+    </div>
+    <div [routerLink]="['/farming']">
+        <i class="fa-duotone fa-gear"></i>
+    </div>
+    <div  [routerLink]="['/connect']">
+        <i class="fa-brands fa-bluetooth"></i>
+    </div>
+</div>

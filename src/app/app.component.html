@@ -1,6 +1,6 @@
-<div class="phone-box">
+<div class="phone-box" [ngClass]="{'he':isH}">
     <img src="assets/iphone.png" alt="" srcset="">
 </div>
-<div class="content">
+<div class="content" [ngClass]="{'he':isH}">
     <router-outlet></router-outlet>
 </div>

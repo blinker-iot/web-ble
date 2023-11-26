@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
 
 @Component({
-  selector: 'app-light-page',
+  selector: 'light-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SettingBtnComponent],
   templateUrl: './light-page.component.html',
   styleUrl: './light-page.component.scss'
 })
