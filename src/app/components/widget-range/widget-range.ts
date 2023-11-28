@@ -64,16 +64,13 @@ export class WidgetRangeComponent {
     return ''
   }
 
-  get color() {
-    return '#CCC'
-  }
+  @Input() color;
 
   get color2() {
-    return '#d5d5d5'
+    return convertToRgba(this.color,0.3)
   }
 
   textBoxWidth = '300px'
-  boxPadding = '0 15px'
 
   getValue(valueKey) {
     if (typeof this.device.data[this.key] != 'undefined')
@@ -110,7 +107,7 @@ export class WidgetRangeComponent {
         this.processValue();
       }
     }, 1000)
-    // this.refresh()
+    this.refresh()
   }
 
   ngOnDestroy() {
@@ -122,14 +119,14 @@ export class WidgetRangeComponent {
     // this.layouterService.send(`{"${this.key}":${senddata}}\n`);
   }
 
-  // refresh() {
-  //   setTimeout(() => {
-  //     this.boxPadding = `0 ${this.gridSize - 32}px`
-  //     setTimeout(() => {
-  //       this.textBoxWidth = `${this.bar.nativeElement.clientWidth}px`
-  //     }, 100)
-  //   })
-  // }
+  refresh() {
+    setTimeout(() => {
+      // this.boxPadding = `0 ${this.gridSize - 32}px`
+      // setTimeout(() => {
+      this.textBoxWidth = `${this.bar.nativeElement.clientWidth}px`
+      // }, 100)
+    })
+  }
 
   // jia() {
   //   if (typeof this.value == 'undefined') this.value = 0

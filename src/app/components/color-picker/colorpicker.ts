@@ -11,8 +11,7 @@ import {
   Injectable
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
-// import * as Hammer from 'hammerjs';
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 
 declare var Hammer: any;
 
@@ -31,14 +30,15 @@ export class MyHammerConfig extends HammerGestureConfig {
   imports: [CommonModule, HammerModule, FormsModule],
   providers: [
     { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig },
+    
   ],
   standalone: true
 })
 export class ColorPickerComponent {
 
   @Output() colorChange = new EventEmitter();
+  @Output() sendData = new EventEmitter();
 
-  // @Input() lstyle = 0;
   _lstyle = 0;
   @Input()
   set lstyle(lstyle) {
@@ -50,12 +50,10 @@ export class ColorPickerComponent {
     return this._lstyle
   }
 
-  @Input() enableWhite = false;
-
   _color;
   @Input()
   set color(color) {
-    this.renderer.setStyle(this.picker.nativeElement, 'background-color', color);
+    // this.renderer.setStyle(this.picker.nativeElement, 'background-color', color);
     this.rgbStr = color;
     this._color = color;
   }
@@ -67,31 +65,23 @@ export class ColorPickerComponent {
   gesture;
   loaded = false;
 
-  @ViewChild('picker', { read: ElementRef, static: true }) picker: ElementRef;
+  // @ViewChild('picker', { read: ElementRef, static: true }) picker: ElementRef;
   @ViewChild('pickerbox', { read: ElementRef, static: true }) pickerbox: ElementRef;
   @ViewChild('knob', { read: ElementRef, static: true }) knob: ElementRef;
 
   value = 0;
 
+  imgsize = 2;
+
   constructor(
     private renderer: Renderer2,
-    public changeDetectorRef: ChangeDetectorRef
+    public changeDetectorRef: ChangeDetectorRef,
   ) {
   }
 
   ngAfterViewInit() {
     this.loadColorImg();
     this.loaded = true;
-
-    let hammerInstance = new Hammer(this.pickerbox.nativeElement,{
-      touchAction: "auto"
-    });
-    hammerInstance.on('tap', function(event) {
-      console.log('tap!');
-    });
-    hammerInstance.on('panstart', function(event) {
-      console.log('panstart!');
-    });
   }
 
   processData(data) {
@@ -109,7 +99,7 @@ export class ColorPickerComponent {
           this.brightness = data[3];
           this.value = data[3];
         }
-        console.log("获得颜色：" + col);
+        // console.log("获得颜色：" + col);
         this.color = col;
       }
     }
@@ -123,21 +113,25 @@ export class ColorPickerComponent {
 
     let x = e.center.x;
     let y = e.center.y;
-    let z = r * 0.91 / Math.sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
-    let x1 = (x - centerX) * z + centerX - rect.left;
-    let y1 = (y - centerY) * z + centerY - rect.top;
-    // this.moveKnob(x1, y1);
+
+    let x1 = x - rect.left;
+    let y1 = y - rect.top;
+
+    let currentR = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2))
+    let z = r / currentR * 0.90
+
+    if (currentR > r) {
+      x1 = (x - centerX) * z + centerX - rect.left;
+      y1 = (y - centerY) * z + centerY - rect.top;
+    }
     this.renderer.setStyle(this.knob.nativeElement, 'left', `${(x1 - 20).toString()}px`);
     this.renderer.setStyle(this.knob.nativeElement, 'top', `${(y1 - 20).toString()}px`);
-    // return { x: x1, y: y1 };
+    console.log(x1, y1);
     this.pick(x1, y1);
   }
 
   tapEvent(e) {
-    console.log('tapEventtapEvent');
-
     this.getKnob(e);
-    // this.sendData();
     this.sendDataAtEnd();
   }
 
@@ -151,18 +145,10 @@ export class ColorPickerComponent {
   }
 
   panendEvent(e) {
-    // this.renderer.setStyle(this.knob.nativeElement, 'transition', '0')
     this.renderer.setStyle(this.knob.nativeElement, 'opacity', '0')
     this.getKnob(e);
     this.sendDataAtEnd();
   }
-
-  // valueChange(value) {
-  //   this.value = value;
-  //   this.rgbStr = `rgba(${this.rgb[0]},${this.rgb[1]},${this.rgb[2]},${this.value / 255})`
-  //   this.renderer.setStyle(this.picker.nativeElement, 'background-color', this.rgbStr);
-  //   this.changeDetectorRef.detectChanges();
-  // }
 
   context;
   image;
@@ -171,19 +157,18 @@ export class ColorPickerComponent {
   loadColorImg() {
     this.context = this.myCanvas.nativeElement.getContext("2d");
     this.image = new Image();
-    if (this.enableWhite) this.image.src = `assets/img/colorpicker.png`;
-    else this.image.src = `assets/img/colorpicker.png`;
+    this.image.src = `assets/img/colorpicker.png`;
     this.image.onload = () => {
       window.setTimeout(() => {
         this.length = this.pickerbox.nativeElement.clientHeight;
-        // console.log(this.length);
-        this.renderer.setAttribute(this.myCanvas.nativeElement, 'width', `${this.length * 4}`);
-        this.renderer.setAttribute(this.myCanvas.nativeElement, 'height', `${this.length * 4}`);
+        this.renderer.setAttribute(this.myCanvas.nativeElement, 'width', `${this.length * this.imgsize}`);
+        this.renderer.setAttribute(this.myCanvas.nativeElement, 'height', `${this.length * this.imgsize}`);
         this.renderer.setStyle(this.knob.nativeElement, 'top', `${this.length / 2 - 20}px`)
         this.renderer.setStyle(this.knob.nativeElement, 'left', `${this.length / 2 - 20}px`)
-        this.context.drawImage(this.image, 0, 0, this.length * 4, this.length * 4);
+        this.context.drawImage(this.image, 0, 0, this.length * this.imgsize, this.length * this.imgsize);
       }, 50);
       // this.context.drawImage(this.image, 0, 0, length, length);
+
     }
   }
 
@@ -191,33 +176,28 @@ export class ColorPickerComponent {
   rgb = [255, 255, 255];
   rgbStr = '#e6e6e6';
   pick(x, y) {
-    let temp = this.context.getImageData(x * 4, y * 4, 1, 1).data;
+    let temp = this.context.getImageData(x, y, 1, 1).data;
     this.rgb = [temp[0], temp[1], temp[2]];
+    console.log(this.rgb);
+    
     let rgbString = this.rgb.toString();
     if (rgbString != this.lastSendColor) {
       this.lastSendColor = rgbString;
-      // this.rgbStr = `rgba(${this.rgb[0]},${this.rgb[1]},${this.rgb[2]},${this.value / 255})`
       this.rgbStr = `rgb(${this.rgb[0]},${this.rgb[1]},${this.rgb[2]})`
-      this.renderer.setStyle(this.picker.nativeElement, 'background-color', this.rgbStr);
       this.changeDetectorRef.detectChanges();
-      this.sendData();
+      this.pickend();
     }
   }
 
   canSend = false;
-  sendData() {
-    if (this.canSend) {
-      this.colorChange.emit(this.rgb);
-      this.canSend = false;
-      window.setTimeout(() => {
-        this.canSend = true;
-      }, 100);
-    }
+  pickend() {
+    this.colorChange.emit(this.rgb);
   }
 
   sendDataAtEnd() {
     // console.log(this.rgb);
     this.colorChange.emit(this.rgb);
+    this.sendData.emit(this.rgb);
   }
 
 }

@@ -1,9 +1,9 @@
 <div class="page">
     <div class="color-picker-box">
-        <color-picker></color-picker>
+        <color-picker (colorChange)="colorChange($event)"></color-picker>
     </div>
     <div class="widget-range-box">
-        <widget-range></widget-range>
+        <widget-range [color]="color"></widget-range>
     </div>
     <setting-btn></setting-btn>
 </div>

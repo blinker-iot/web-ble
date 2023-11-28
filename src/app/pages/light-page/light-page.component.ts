@@ -14,4 +14,10 @@ import { WidgetRangeComponent } from '../../components/widget-range/widget-range
 })
 export class LightPageComponent {
 
+  color;
+
+  colorChange(e) {
+    // console.log(`rgb(${e[0]},${e[1]}, ${e[2]})`);
+    this.color = `rgb(${e[0]},${e[1]}, ${e[2]})`
+  }
 }
