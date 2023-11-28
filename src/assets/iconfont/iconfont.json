@@ -1,0 +1,163 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "38286426",
+      "name": "wind-direction",
+      "font_class": "wind-direction",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "38286427",
+      "name": "humidity",
+      "font_class": "humidity",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "38286428",
+      "name": "joystick",
+      "font_class": "joystick",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "38286430",
+      "name": "pressure",
+      "font_class": "pressure",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "38286431",
+      "name": "smarthome",
+      "font_class": "smarthome",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "38286432",
+      "name": "wind-speed",
+      "font_class": "wind-speed",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "38286433",
+      "name": "temperature",
+      "font_class": "temperature",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "38286434",
+      "name": "rainfall",
+      "font_class": "rainfall",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "38286435",
+      "name": "co2",
+      "font_class": "co2",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "38286436",
+      "name": "fan",
+      "font_class": "fan",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "38286437",
+      "name": "light",
+      "font_class": "light",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "38286438",
+      "name": "light2",
+      "font_class": "light2",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "38286439",
+      "name": "pipe",
+      "font_class": "pipe",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "38286440",
+      "name": "door",
+      "font_class": "door",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "38286441",
+      "name": "water",
+      "font_class": "water",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "38286442",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "38286443",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "38286444",
+      "name": "farming",
+      "font_class": "farming",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "38286445",
+      "name": "windmill",
+      "font_class": "windmill",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "38286446",
+      "name": "pm",
+      "font_class": "pm",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "38286447",
+      "name": "curtain",
+      "font_class": "curtain",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "38286448",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    }
+  ]
+}

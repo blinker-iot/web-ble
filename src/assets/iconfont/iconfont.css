@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1701098123746') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wind-direction:before {
+  content: "\e643";
+}
+
+.icon-humidity:before {
+  content: "\e644";
+}
+
+.icon-joystick:before {
+  content: "\e645";
+}
+
+.icon-pressure:before {
+  content: "\e646";
+}
+
+.icon-smarthome:before {
+  content: "\e647";
+}
+
+.icon-wind-speed:before {
+  content: "\e648";
+}
+
+.icon-temperature:before {
+  content: "\e649";
+}
+
+.icon-rainfall:before {
+  content: "\e64a";
+}
+
+.icon-co2:before {
+  content: "\e64b";
+}
+
+.icon-fan:before {
+  content: "\e64c";
+}
+
+.icon-light:before {
+  content: "\e64d";
+}
+
+.icon-light2:before {
+  content: "\e64e";
+}
+
+.icon-pipe:before {
+  content: "\e64f";
+}
+
+.icon-door:before {
+  content: "\e650";
+}
+
+.icon-water:before {
+  content: "\e651";
+}
+
+.icon-setting:before {
+  content: "\e652";
+}
+
+.icon-sun:before {
+  content: "\e653";
+}
+
+.icon-farming:before {
+  content: "\e654";
+}
+
+.icon-windmill:before {
+  content: "\e655";
+}
+
+.icon-pm:before {
+  content: "\e656";
+}
+
+.icon-curtain:before {
+  content: "\e657";
+}
+
+.icon-music:before {
+  content: "\e658";
+}
+

@@ -3,27 +3,18 @@
     <div class="text">蓝牙物联网-教育版</div>
     <!-- <div class="help"><a>?</a></div> -->
     <div class="connect-box">
+        <!-- <div class="text">0. 阅读本软件使用说明</div> -->
         <div class="text">1. 连接蓝牙BLE设备</div>
         <button class="connect-btn" (click)="search()" *ngIf="!device">连接设备</button>
         <button class="connect-btn" (click)="disconnect()" *ngIf="device">已连接 {{device.name}}</button>
     </div>
     <div class="text" style="margin-top: 30px;">2. 选择设备操作界面</div>
     <div class="btn-box">
-        <div [routerLink]="['/light']">
-            <div class="icon-box"></div>
-            LED控制
-        </div>
-        <div [routerLink]="['/joystick']">
-            <div class="icon-box"></div>
-            小车遥控器
-        </div>
-        <div [routerLink]="['/smarthome']">
-            <div class="icon-box"></div>
-            智能家居
-        </div>
-        <div [routerLink]="['/farming']">
-            <div class="icon-box"></div>
-            智慧农场
+        <div [routerLink]="[item.link]" *ngFor="let item of MENU">
+            <div class="icon-box">
+                <i class="iconfont icon-{{item.icon}}"></i>
+            </div>
+            {{item.name}}
         </div>
     </div>
     <div class="add">

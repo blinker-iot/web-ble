@@ -89,7 +89,15 @@
             background: #FFF;
             margin-bottom: 7px;
             box-shadow: 0 0 5px #CCC;
-            border-radius: 5px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+               font-size: 30px; 
+               color: #2581de;
+            }
+            
         }
     }
 }

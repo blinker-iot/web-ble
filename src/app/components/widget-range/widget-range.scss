@@ -1,0 +1,130 @@
+.range-box {
+    position: relative;
+    height: 70px;
+    width: 100%;
+}
+
+
+.text-box {
+    position: absolute;
+    top: 0;
+    color: #333;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    pointer-events: none;
+    font-size: 10px;
+
+    .text {
+        display: flex;
+        align-items: center;
+        i {
+            margin-right: 6px;
+            font-size: 26px;
+        }
+    }
+
+    .value {
+        position: absolute;
+        right: 15px;
+    }
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .bar {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+        overflow: hidden;
+        background: rgba(238, 238, 238, 0.5);
+        position: relative;
+
+        .activebar {
+            border-radius: 5px;
+            width: 0%;
+            height: 100%;
+            background: #333;
+            overflow: hidden;
+            color: #FFF;
+            transition: background-color 0.5s;
+            white-space: nowrap;
+            position: relative;
+
+            .text-box {
+                color: #fff;
+            }
+        }
+    }
+
+    .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .knob {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #FFF;
+        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.slider-y {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    min-width: 20px;
+    min-height: 50px;
+    padding: 10px 0;
+
+    .bar {
+        width: 5px;
+        height: 100%;
+        border-radius: 2.5px;
+    }
+
+    .bar-active {
+        position: absolute;
+        bottom: 0;
+        height: 0%;
+    }
+
+    .knob-box {
+        position: absolute;
+        height: 100%;
+        width: 20px;
+        left: 0;
+
+        .knob {
+            bottom: 0;
+        }
+    }
+
+    .touch {
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+    }
+}

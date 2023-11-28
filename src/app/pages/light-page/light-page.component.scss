@@ -1,6 +1,11 @@
-.page {
-    padding: 24px 15px 0 15px;
+@import "../page.scss";
+
+.color-picker-box{
     position: relative;
-    height: calc(100vh - 24px);
-    width: calc(100% - 30px);
+    width: 100%;
+}
+
+.widget-range-box{
+    position: relative;
+    width: 100%;
 }

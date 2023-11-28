@@ -1,9 +1,5 @@
-.page {
-    padding: 24px 15px 0 15px;
-    position: relative;
-    height: calc(100vh - 24px);
-    width: calc(100% - 30px);
-}
+@import "../page.scss";
+$block-size: 70px;
 
 @media screen and (max-width: 500px) {
     .btn-box {
@@ -71,6 +67,88 @@
 
             &:last-child {
                 top: 20vw;
+                left: 0;
+
+                img {
+                    transform: rotate(90deg);
+                    transform-origin: bottom right;
+                    position: absolute;
+                    bottom: 0;
+                    right: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 501px) {
+    .btn-box {
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        // background-color: rgba(255, 104, 34, 0.455);
+
+        &.left {
+            top: 40px;
+            left: 20px;
+        }
+
+        &.right {
+            bottom: 40px;
+            left: 20px;
+        }
+
+        .btn2 {
+            background-color: rgb(94, 220, 255);
+            border-radius: 50%;
+        }
+
+        .btn {
+            width: $block-size;
+            height: $block-size;
+            position: absolute;
+
+            transform: scale(1.1);
+
+            img {
+                width: $block-size;
+            }
+
+            &:first-child {
+                top: $block-size;
+                right: 0;
+
+                img {
+                    transform: rotate(-90deg);
+                    transform-origin: left bottom;
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                left: $block-size;
+
+                img {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+                right: $block-size;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            &:last-child {
+                top: $block-size;
                 left: 0;
 
                 img {

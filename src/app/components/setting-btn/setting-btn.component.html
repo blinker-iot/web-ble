@@ -1,19 +1,19 @@
 <div class="setting-btn" (click)="turnMenu()">
-    <i class="fa-duotone fa-gear"></i>
+    <i class="iconfont icon-setting"></i>
 </div>
-<div *ngIf="!hideMenu" class="menu animate__animated animate__fadeInDown">
-    <div [routerLink]="['/light']">
-        <i class="fa-duotone fa-gear"></i>
+<div *ngIf="!hideMenu" class="menu" [ngClass]="{'he':isH}">
+    <div [routerLink]="[item.link]" *ngFor="let item of MENU">
+        <i class="iconfont icon-{{item.icon}}"></i>
     </div>
-    <div [routerLink]="['/joystick']">
-        <i class="fa-duotone fa-gear"></i>
+    <!-- <div [routerLink]="['/joystick']">
+        <i class="iconfont {{}}"></i>
     </div>
     <div [routerLink]="['/smarthome']">
-        <i class="fa-duotone fa-gear"></i>
+        <i class="iconfont {{}}"></i>
     </div>
     <div [routerLink]="['/farming']">
-        <i class="fa-duotone fa-gear"></i>
-    </div>
+        <i class="iconfont {{}}"></i>
+    </div> -->
     <div  [routerLink]="['/connect']">
         <i class="fa-brands fa-bluetooth"></i>
     </div>

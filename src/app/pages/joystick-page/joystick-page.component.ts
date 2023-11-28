@@ -15,7 +15,7 @@ export class JoystickPageComponent {
 
   ngOnInit() {
     // 检查是否是PC访问
-    var isPC = function() {
+    var isPC = function () {
       var userAgentInfo = navigator.userAgent;
       var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
       var flag = true;
@@ -27,7 +27,7 @@ export class JoystickPageComponent {
 
     // 如果是PC访问，添加键盘输入事件监听器
     if (isPC()) {
-      this.keydownHandler = function(event) {
+      this.keydownHandler = function (event) {
         console.log('按键字母：', event.key);
       }
       window.addEventListener('keydown', this.keydownHandler);
