@@ -2,16 +2,22 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
 import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
+import { BleService } from '../../ble.service';
+import { WidgetJoystickComponent } from '../../components/widget-joystick/widget-joystick';
 @Component({
   selector: 'app-joystick-page',
   standalone: true,
-  imports: [CommonModule, HammerModule, SettingBtnComponent],
+  imports: [CommonModule, HammerModule, SettingBtnComponent, WidgetJoystickComponent],
   templateUrl: './joystick-page.component.html',
   styleUrl: './joystick-page.component.scss'
 })
 export class JoystickPageComponent {
 
   private keydownHandler: any;
+
+  constructor(
+    private bleService: BleService
+  ) { }
 
   ngOnInit() {
     // 检查是否是PC访问
@@ -37,5 +43,18 @@ export class JoystickPageComponent {
   ngOnDestroy() {
     // 当离开页面时，移除键盘输入事件监听器
     window.removeEventListener('keydown', this.keydownHandler);
+  }
+
+  sendData(data) {
+    console.log(data);
+    this.bleService.sendData(data)
+  }
+
+  press(data) {
+
+  }
+
+  pressEnd(data) {
+
   }
 }

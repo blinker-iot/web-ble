@@ -4,3 +4,9 @@
 <div class="content" [ngClass]="{'he':isH}">
     <router-outlet></router-outlet>
 </div>
+
+<div class="mask" *ngIf="browserVersionError">
+    <div class="warn-bg">
+        当前浏览器不支持蓝牙功能，请使用最新的Edge或Chrome浏览器访问
+    </div>
+</div>

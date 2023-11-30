@@ -18,11 +18,19 @@ export class BleService {
 
   constructor() { }
 
+  browserVersionError = true
+
+  init() {
+    if (!bluetooth) {
+      console.log('不支持的浏览器');
+    }
+  }
+
   searchDevice() {
     bluetooth.requestDevice({
       // acceptAllDevices: true,
       optionalServices: [this.serviceUUID],
-      filters: [ { services: [this.serviceUUID] }]
+      filters: [{ services: [this.serviceUUID] }]
     })
       .then(device => {
         this.device = device;
@@ -35,10 +43,15 @@ export class BleService {
         return server.getPrimaryService(this.serviceUUID);
       })
       .then(service => {
+        console.log(service);
+
         return service.getCharacteristic(this.characteristicUUID);
       })
       .then(characteristic => {
+        console.log(characteristic);
         this.characteristicInstance = characteristic;
+        console.log(this.characteristicInstance);
+
         this.characteristicInstance.addEventListener('characteristicvaluechanged', (event) => this.handleCharacteristicValueChanged(event));
         this.characteristicInstance.startNotifications();
       })
@@ -48,10 +61,12 @@ export class BleService {
   }
 
   sendData(data) {
-    if (this.characteristicInstance) {
+    if (!this.characteristicInstance) {
       console.log('No characteristic to write to!');
       return;
     }
+    console.log(this.characteristicInstance);
+
     let encoder = new TextEncoder();
     this.characteristicInstance.writeValue(encoder.encode(data))
       .then(() => {

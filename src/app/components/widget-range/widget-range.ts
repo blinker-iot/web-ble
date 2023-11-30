@@ -1,4 +1,4 @@
-import { Component, ElementRef, Injectable, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Injectable, Input, Output, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 
@@ -26,12 +26,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 })
 export class WidgetRangeComponent {
 
-  @Input() device;
-  @Input() widget;
 
-  get key() {
-    return this.widget.key;
-  }
+  @Output() valueChange = new EventEmitter();
 
   get tex() {
     return '亮度'
@@ -67,38 +63,15 @@ export class WidgetRangeComponent {
   @Input() color;
 
   get color2() {
-    return convertToRgba(this.color,0.3)
+    return convertToRgba(this.color, 0.3)
   }
 
   textBoxWidth = '300px'
-
-  getValue(valueKey) {
-    if (typeof this.device.data[this.key] != 'undefined')
-      if (typeof this.device.data[this.key][valueKey] != 'undefined')
-        return this.device.data[this.key][valueKey]
-    if (typeof this.widget[valueKey] != 'undefined')
-      return this.widget[valueKey]
-    return
-  }
-
-  _lstyle
-  @Input()
-  set lstyle(lstyle) {
-    this._lstyle = lstyle
-  }
-  get lstyle() {
-    if (typeof this._lstyle != 'undefined')
-      return this._lstyle
-    if (typeof this.widget.lstyle != 'undefined')
-      return this.widget.lstyle
-    return 0;
-  }
 
   constructor(
     private renderer: Renderer2
   ) {
   }
-
 
   timer;
   ngAfterViewInit() {
@@ -117,6 +90,7 @@ export class WidgetRangeComponent {
   canSend = true;
   sendData(senddata) {
     // this.layouterService.send(`{"${this.key}":${senddata}}\n`);
+    this.valueChange.emit(this.value)
   }
 
   refresh() {
@@ -127,18 +101,6 @@ export class WidgetRangeComponent {
       // }, 100)
     })
   }
-
-  // jia() {
-  //   if (typeof this.value == 'undefined') this.value = 0
-  //   if (this.value < this.max) this.value++
-  //   this.sendData(this.value)
-  // }
-
-  // jian() {
-  //   if (typeof this.value == 'undefined') this.value = 0
-  //   if (this.value > this.min) this.value--
-  //   this.sendData(this.value)
-  // }
 
   @ViewChild("bar", { read: ElementRef, static: true }) bar: ElementRef;
   @ViewChild("barActive", { read: ElementRef, static: true }) activeBar: ElementRef;
@@ -221,8 +183,6 @@ export class WidgetRangeComponent {
   }
 
   tapEvent(e) {
-    console.log('taptaptap');
-
     this.renderer.removeStyle(this.activeBar.nativeElement, 'transition');
     let move;
     if (this.direction == 'x') {
@@ -255,12 +215,12 @@ export class WidgetRangeComponent {
     }
     move = this.checkLimit(move)
     this.moveSlider(move);
-    this.pick();
+    this.pick('end');
   }
 
   panendEvent(e) {
     this.isMoving = false;
-    this.pick('end');
+    // this.pick('end');
   }
 
   oldValue: number;

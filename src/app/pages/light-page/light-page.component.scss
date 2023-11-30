@@ -1,11 +1,38 @@
 @import "../page.scss";
 
-.color-picker-box{
+.color-picker-box {
     position: relative;
     width: 100%;
 }
 
-.widget-range-box{
+.widget-range-box {
+    margin-top: 30px;
     position: relative;
     width: 100%;
+}
+
+.turn {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .turn-btn {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #323232;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #CCC;
+        transition: all 0.1s;
+
+        &:active {
+            transform: scale(0.92);
+        }
+    }
+
+
 }

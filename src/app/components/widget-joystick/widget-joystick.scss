@@ -1,0 +1,38 @@
+.joyout {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.stick {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: rgba(56, 156, 238, 0.8);
+    border-radius: 50%;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+}
+
+.touch {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.joystick-box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,23 +1,24 @@
 <div class="page">
     <div class="btn-box left">
-        <div class="btn">
+        <widget-joystick></widget-joystick>
+        <!-- <div class="btn" (press)="press('w\n')" (pressend)="pressEnd('w\n')">
             <img src="assets/img/js-btn.webp" alt="">
         </div>
-        <div class="btn">
+        <div class="btn" (click)="sendData('a\n')">
             <img src="assets/img/js-btn.webp" alt="">
         </div>
-        <div class="btn">
+        <div class="btn" (click)="sendData('d\n')">
             <img src="assets/img/js-btn.webp" alt="">
         </div>
-        <div class="btn">
+        <div class="btn" (click)="sendData('s\n')">
             <img src="assets/img/js-btn.webp" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="btn-box right">
-        <div class="btn btn2"></div>
-        <div class="btn btn2"></div>
-        <div class="btn btn2"></div>
-        <div class="btn btn2"></div>
+        <div class="btn btn2" (click)="sendData('a\n')"></div>
+        <div class="btn btn2" (click)="sendData('b\n')"></div>
+        <div class="btn btn2" (click)="sendData('c\n')"></div>
+        <div class="btn btn2" (click)="sendData('d\n')"></div>
     </div>
     <setting-btn></setting-btn>
 </div>

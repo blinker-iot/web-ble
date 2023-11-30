@@ -2,6 +2,23 @@
     display: none;
 }
 
+.content {
+    height: 100%;
+}
+
+.mask {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .warn-bg {
+        background: #FFF;
+    }
+}
+
+
 @media screen and (min-width: 500px) {
     .phone-box {
         display: block;
@@ -34,11 +51,5 @@
         border: 1px solid red;
         width: 307px;
         height: 663px;
-
-        ::ng-deep {
-            .page {
-                height: calc(100% - 24px);
-            }
-        }
     }
 }

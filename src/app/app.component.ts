@@ -2,6 +2,7 @@ import { Component, Injectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HammerModule } from '@angular/platform-browser';
+import { BleService } from './ble.service';
 // import 'hammerjs';
 // import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 
@@ -31,13 +32,19 @@ export class AppComponent {
 
   isH = false;
 
+  get browserVersionError(){
+    return this.bleService.browserVersionError
+  }
 
   constructor(
-    private router: Router
+    private router: Router,
+    private bleService: BleService
   ) {
   }
 
   ngOnInit(): void {
+    this.bleService.init()
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // console.log('NavigationEnd:', event);

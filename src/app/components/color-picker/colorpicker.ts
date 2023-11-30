@@ -126,7 +126,6 @@ export class ColorPickerComponent {
     }
     this.renderer.setStyle(this.knob.nativeElement, 'left', `${(x1 - 20).toString()}px`);
     this.renderer.setStyle(this.knob.nativeElement, 'top', `${(y1 - 20).toString()}px`);
-    console.log(x1, y1);
     this.pick(x1, y1);
   }
 
@@ -167,7 +166,6 @@ export class ColorPickerComponent {
         this.renderer.setStyle(this.knob.nativeElement, 'left', `${this.length / 2 - 20}px`)
         this.context.drawImage(this.image, 0, 0, this.length * this.imgsize, this.length * this.imgsize);
       }, 50);
-      // this.context.drawImage(this.image, 0, 0, length, length);
 
     }
   }
@@ -178,8 +176,6 @@ export class ColorPickerComponent {
   pick(x, y) {
     let temp = this.context.getImageData(x, y, 1, 1).data;
     this.rgb = [temp[0], temp[1], temp[2]];
-    console.log(this.rgb);
-    
     let rgbString = this.rgb.toString();
     if (rgbString != this.lastSendColor) {
       this.lastSendColor = rgbString;
@@ -195,7 +191,6 @@ export class ColorPickerComponent {
   }
 
   sendDataAtEnd() {
-    // console.log(this.rgb);
     this.colorChange.emit(this.rgb);
     this.sendData.emit(this.rgb);
   }

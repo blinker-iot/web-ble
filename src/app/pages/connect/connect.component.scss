@@ -1,25 +1,20 @@
-.page {
-    padding: 24px 15px 0 15px;
-    position: relative;
-    height: calc(100vh - 24px);
+@import "../page.scss";
+
+.footer {
+    position: absolute;
     width: calc(100% - 30px);
+    bottom: 15px;
+    text-align: center;
+    color: #808080;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    .footer {
-        position: absolute;
-        width: calc(100% - 30px);
-        bottom: 15px;
-        text-align: center;
-        color: #808080;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        img {
-            height: 30px;
-            margin-left: -34px;
-        }
+    img {
+        height: 30px;
+        margin-left: -34px;
     }
 }
 
@@ -93,11 +88,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            i{
-               font-size: 30px; 
-               color: #2581de;
+
+            i {
+                font-size: 30px;
+                color: #2581de;
             }
-            
+
         }
     }
 }
