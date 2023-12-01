@@ -1,22 +1,41 @@
 @import "../page.scss";
 
-.page{
+.page {
     overflow: hidden;
 }
 
-.bg{
+.bg {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     height: 100%;
-    img{
+
+    img {
         height: 100%;
         transform: translate(-20%, 0%);
         opacity: 0.6;
+        touch-action: manipulation;
     }
 }
 
 $block-size: 70px;
+
+.btn {
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    color: #FFF;
+    font-size: 24px;
+
+    &:active {
+        transform: scale(0.95) rotate(90deg);
+        background-color: rgb(51, 163, 255);
+    }
+}
 
 @media screen and (max-width: 500px) {
     .btn-box {
@@ -34,17 +53,10 @@ $block-size: 70px;
             left: 60px;
         }
 
-        .btn2 {
-            background-color: rgb(94, 220, 255);
-            border-radius: 50%;
-        }
-
         .btn {
             width: 20vw;
             height: 20vw;
             position: absolute;
-
-            transform: scale(1.1);
 
             img {
                 width: 20vw;
@@ -64,21 +76,21 @@ $block-size: 70px;
             }
 
             &:nth-child(2) {
-                top: 0;
-                left: 20vw;
-
-                img {
-                    transform: rotate(-180deg);
-                }
-            }
-
-            &:nth-child(3) {
                 bottom: 0;
                 right: 20vw;
 
                 img {
                     position: absolute;
                     bottom: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                top: 0;
+                left: 20vw;
+
+                img {
+                    transform: rotate(-180deg);
                 }
             }
 
@@ -99,34 +111,29 @@ $block-size: 70px;
 
 }
 
+// PC端
 @media screen and (min-width: 501px) {
+    $block-size: 60px;
+
     .btn-box {
-        width: 210px;
-        height: 210px;
+        width: 180px;
+        height: 180px;
         position: absolute;
-        // background-color: rgba(255, 104, 34, 0.455);
 
         &.left {
-            top: 40px;
-            left: 20px;
+            top: 70px;
+            left: 50px;
         }
 
         &.right {
-            bottom: 40px;
-            left: 20px;
-        }
-
-        .btn2 {
-            background-color: rgb(94, 220, 255);
-            border-radius: 50%;
+            bottom: 70px;
+            left: 50px;
         }
 
         .btn {
             width: $block-size;
             height: $block-size;
             position: absolute;
-
-            transform: scale(1.1);
 
             img {
                 width: $block-size;
@@ -146,21 +153,21 @@ $block-size: 70px;
             }
 
             &:nth-child(2) {
-                top: 0;
-                left: $block-size;
-
-                img {
-                    transform: rotate(-180deg);
-                }
-            }
-
-            &:nth-child(3) {
                 bottom: 0;
                 right: $block-size;
 
                 img {
                     position: absolute;
                     bottom: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                top: 0;
+                left: $block-size;
+
+                img {
+                    transform: rotate(-180deg);
                 }
             }
 

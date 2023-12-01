@@ -3,13 +3,13 @@
         <img src="/assets/img/joystick.webp" alt="" srcset="">
     </div>
     <div class="btn-box left">
-        <widget-joystick></widget-joystick>
+        <widget-joystick (valueChange)="valueChange($event)"></widget-joystick>
     </div>
     <div class="btn-box right">
-        <div class="btn btn2" (press)="sendData('a\n')" (pressup)="pressup('a\n')"></div>
-        <div class="btn btn2" (press)="sendData('b\n')" (pressup)="pressup('a\n')"></div>
-        <div class="btn btn2" (press)="sendData('c\n')" (pressup)="pressup('a\n')"></div>
-        <div class="btn btn2" (press)="sendData('d\n')" (pressup)="pressup('a\n')"></div>
+        <div #button1 class="btn btn2" (tap)="tap('B1')" (press)="startSend('B1')" (pressup)="stopSend('B1')">B1</div>
+        <div #button2 class="btn btn2" (tap)="tap('B2')" (press)="startSend('B2')" (pressup)="stopSend('B2')">B2</div>
+        <div #button3 class="btn btn2" (tap)="tap('B3')" (press)="startSend('B3')" (pressup)="stopSend('B3')">B3</div>
+        <div #button4 class="btn btn2" (tap)="tap('B4')" (press)="startSend('B4')" (pressup)="stopSend('B4')">B4</div>
     </div>
     <setting-btn></setting-btn>
 </div>

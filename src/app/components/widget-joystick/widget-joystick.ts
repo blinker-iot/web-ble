@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, Renderer2, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -10,11 +10,10 @@ import { Component, Renderer2, ViewChild, ElementRef } from '@angular/core';
   standalone: true
 })
 export class WidgetJoystickComponent {
-
-  gesture;
   @ViewChild("touchZone", { read: ElementRef, static: true }) touchZone: ElementRef;
   @ViewChild("stick", { read: ElementRef, static: true }) stick: ElementRef;
-  loaded = false;
+
+  @Output() valueChange = new EventEmitter();
 
   constructor(
     private renderer: Renderer2
@@ -39,8 +38,8 @@ export class WidgetJoystickComponent {
     if (this.oldX != x || this.oldY != y) {
       this.renderer.setStyle(this.stick.nativeElement, 'left', `${(l).toString()}px`);
       this.renderer.setStyle(this.stick.nativeElement, 'top', `${(t).toString()}px`);
-      let senddata = `JOY:${x},${y}\n`;
-      this.sendData(senddata);
+      this.senddata = `${x},${y}`;
+      // this.sendData(senddata);
       this.oldX = x;
       this.oldY = y;
     }
@@ -49,19 +48,23 @@ export class WidgetJoystickComponent {
   panend(event) {
     this.renderer.setStyle(this.stick.nativeElement, 'left', `calc(50% - 35px)`);
     this.renderer.setStyle(this.stick.nativeElement, 'top', `calc(50% - 35px)`);
-    let senddata = `JOY:128,128\n`;
-    // this.LayouterService.send(senddata);
+    this.senddata = `128,128`;
+    this.stopSend() 
   }
 
+  timer;
   canSend = true;
-  sendData(senddata) {
-    if (this.canSend) {
-      // this.LayouterService.send(senddata);
-      this.canSend = false;
-      window.setTimeout(() => {
-        this.canSend = true;
-      }, 100);
-    }
+  senddata = `128,128`
+
+  panstart(event) {
+    this.timer = setInterval(() => {
+      this.valueChange.emit(this.senddata)
+    }, 100)
+  }
+
+  stopSend() {
+    this.valueChange.emit(this.senddata)
+    clearInterval(this.timer)
   }
 
 }

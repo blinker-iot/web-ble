@@ -33,14 +33,14 @@ export class AppComponent {
 
   isH = false;
 
-  get browserVersionError(){
+  get browserVersionError() {
     return this.bleService.browserVersionError
   }
 
   constructor(
     private router: Router,
     private bleService: BleService,
-    private deviceService:DeviceService
+    private deviceService: DeviceService
   ) {
   }
 
@@ -58,10 +58,12 @@ export class AppComponent {
       }
     })
 
-    // if (orientation) {
-    //   orientation.lock('portrait').catch(err => {
-    //     console.log(err);
-    //   });
-    // }
+    window.onload = function () {
+      document.addEventListener('contextmenu', function (e) {
+        if (e.target['tagName'] === 'IMG') {
+          e.preventDefault();
+        }
+      });
+    }
   }
 }

@@ -3,5 +3,5 @@
     <img src="assets/img/joyout.png" />
   </div>
   <div class="stick" #stick></div>
-  <div class="touch" #touchZone (panend)="panend($event)" (panmove)="panmove($event)"></div>
+  <div class="touch" #touchZone (panstart)="panstart($event)" (panend)="panend($event)" (panmove)="panmove($event)" ></div>
 </div>

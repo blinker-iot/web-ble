@@ -34,8 +34,8 @@ export class BleService {
     })
       .then(device => {
         this.device = device;
-        console.log(this.device);
-        console.log(this.device.name);
+        // console.log(this.device);
+        // console.log(this.device.name);
         return device.gatt.connect();
       })
       .then(server => {
@@ -48,29 +48,30 @@ export class BleService {
         return service.getCharacteristic(this.characteristicUUID);
       })
       .then(characteristic => {
-        console.log(characteristic);
+        // console.log(characteristic);
         this.characteristicInstance = characteristic;
-        console.log(this.characteristicInstance);
-
+        // console.log(this.characteristicInstance);
         this.characteristicInstance.addEventListener('characteristicvaluechanged', (event) => this.handleCharacteristicValueChanged(event));
         this.characteristicInstance.startNotifications();
       })
       .catch(error => {
         console.log(error);
+        // this.device = null
       });
   }
 
   sendData(data) {
+    // console.log('sendData', data);
     if (!this.characteristicInstance) {
       console.log('No characteristic to write to!');
+      // if (!this.device)
+      //   this.searchDevice()
       return;
     }
-    console.log(this.characteristicInstance);
-
     let encoder = new TextEncoder();
     this.characteristicInstance.writeValue(encoder.encode(data))
       .then(() => {
-        console.log(`Data sent: ${data}`);
+        // console.log(`Data sent: ${data}`);
       })
       .catch(error => {
         console.log(`Send error: ${error}`);
