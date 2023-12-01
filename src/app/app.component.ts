@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HammerModule } from '@angular/platform-browser';
 import { BleService } from './ble.service';
+import { DeviceService } from './device.service';
 // import 'hammerjs';
 // import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 
@@ -38,13 +39,14 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-    private bleService: BleService
+    private bleService: BleService,
+    private deviceService:DeviceService
   ) {
   }
 
   ngOnInit(): void {
     this.bleService.init()
-
+    this.deviceService.init()
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // console.log('NavigationEnd:', event);

@@ -1,4 +1,21 @@
 @import "../page.scss";
+
+.page{
+    overflow: hidden;
+}
+
+.bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    img{
+        height: 100%;
+        transform: translate(-20%, 0%);
+        opacity: 0.6;
+    }
+}
+
 $block-size: 70px;
 
 @media screen and (max-width: 500px) {

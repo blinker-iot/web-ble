@@ -18,7 +18,7 @@ export class BleService {
 
   constructor() { }
 
-  browserVersionError = true
+  browserVersionError = false
 
   init() {
     if (!bluetooth) {
