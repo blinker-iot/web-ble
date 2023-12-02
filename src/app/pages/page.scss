@@ -5,4 +5,10 @@
     width: calc(100% - 30px);
     background: #fbfbfb;
     user-select: none;
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

@@ -1,14 +1,25 @@
 <div class="page">
-    <div>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
-        <data-box></data-box>
+    <div class="bg-box">
+        <img src="assets/img/farming-bg.jpg" alt="">
     </div>
-    <line-chart></line-chart>
+    <div class="content">
+        <div class="data-list">
+            <div class="data-box" *ngFor="let item of items">
+                <data-box [config]="item"></data-box>
+            </div>
+        </div>
+        <div class="line">
+            <line-chart></line-chart>
+        </div>
+        <div class="text">
+            控制中心
+        </div>
+        <div class="ctrl-list">
+            <div class="ctrl-box" *ngFor="let item of items2">
+            
+            </div>
+        </div>
+    </div>
+
     <setting-btn></setting-btn>
 </div>
