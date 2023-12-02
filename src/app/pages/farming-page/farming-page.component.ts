@@ -3,16 +3,17 @@ import { CommonModule } from '@angular/common';
 import { LineChartComponent } from '../../components/line-chart/line-chart.component';
 import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
 import { DataBoxComponent } from '../../components/data-box/data-box.component';
+import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 
 @Component({
   selector: 'app-farming-page',
   standalone: true,
-  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent],
+  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent,CtrlBoxComponent],
   templateUrl: './farming-page.component.html',
   styleUrl: './farming-page.component.scss'
 })
 export class FarmingPageComponent {
-  items = [
+  items1 = [
     {
       name: '环境温度',
       icon: 'iconfont icon-temperature',
@@ -43,7 +44,11 @@ export class FarmingPageComponent {
       icon: 'iconfont icon-wind-speed',
       unit: 'm/s',
       key: 'windSpeed'
-    }, {
+    }
+  ]
+
+  items2 = [
+    {
       name: '水质',
       icon: 'iconfont icon-water',
       unit: 'mg/L',
@@ -56,7 +61,7 @@ export class FarmingPageComponent {
     }
   ]
 
-  items2 = [
+  items3 = [
     {
       name: '灌溉',
       icon: 'iconfont icon-pipe',

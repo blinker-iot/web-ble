@@ -4,7 +4,12 @@
     </div>
     <div class="content">
         <div class="data-list">
-            <div class="data-box" *ngFor="let item of items">
+            <div class="data-box" *ngFor="let item of items1">
+                <data-box [config]="item"></data-box>
+            </div>
+        </div>
+        <div class="data-list data-list2">
+            <div class="data-box" *ngFor="let item of items2">
                 <data-box [config]="item"></data-box>
             </div>
         </div>
@@ -15,8 +20,8 @@
             控制中心
         </div>
         <div class="ctrl-list">
-            <div class="ctrl-box" *ngFor="let item of items2">
-            
+            <div class="ctrl-box" *ngFor="let item of items3">
+                <ctrl-box [config]="item"></ctrl-box>
             </div>
         </div>
     </div>

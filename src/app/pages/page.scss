@@ -6,9 +6,8 @@
     background: #fbfbfb;
     user-select: none;
     overflow-y: auto;
-    ::-webkit-scrollbar {
-        display: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
     }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
