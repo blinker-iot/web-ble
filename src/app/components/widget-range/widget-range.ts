@@ -56,10 +56,6 @@ export class WidgetRangeComponent {
     return 0
   }
 
-  get ico() {
-    return ''
-  }
-
   @Input() color;
 
   get color2() {

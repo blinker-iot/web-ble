@@ -2,13 +2,13 @@
   <div class="slider" [ngClass]="{'slider':direction == 'x' , 'slider-y':direction == 'y'}">
     <div class="bar" #bar [ngStyle]="{'background':color2}">
       <div class="text-box" [ngStyle]="{'color':color}">
-        <div class="text"><i class="{{ico}}" [ngStyle]="{'color':color}"></i>{{tex}}</div>
-        <div class="value">{{value}}</div>
+        <div class="text"><i class="iconfont icon-sun" [ngStyle]="{'color':color}"></i>{{value}}</div>
+        <!-- <div class="value">{{value}}</div> -->
       </div>
       <div class="activebar" [ngStyle]="{'background':color}" #barActive>
         <div class="text-box" [ngStyle]="{'width': textBoxWidth}">
-          <div class="text"><i class="{{ico}}" [ngStyle]="{'color':'#FFF'}"></i>{{tex}}</div>
-          <div class="value">{{value}}</div>
+          <div class="text"><i class="iconfont icon-sun" [ngStyle]="{'color':'#FFF'}"></i>{{value}}</div>
+          <!-- <div class="value">{{value}}</div> -->
         </div>
       </div>
     </div>

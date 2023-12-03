@@ -1,6 +1,7 @@
 @import "../page.scss";
 
 .color-picker-box {
+    margin-top: 24px;
     position: relative;
     width: 100%;
 }
@@ -13,20 +14,21 @@
 
 .turn {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 21vw;
     display: flex;
     justify-content: center;
 
     .turn-btn {
-        width: 70px;
-        height: 70px;
+        width: 21vw;
+        height: 21vw;
         border-radius: 50%;
-        box-shadow: 0 0 5px #323232;
+        background: #FFF;
+        box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.11);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 30px;
-        color: #CCC;
+        font-size: 10vw;
+        color: #306CFF;
         transition: all 0.1s;
 
         &:active {
