@@ -24,8 +24,11 @@
             <div class="ctrl-box" *ngFor="let item of items3">
                 <ctrl-box [config]="item" (stateChange)="stateChange($event,item)"></ctrl-box>
             </div>
+            <div class="ctrl-box">
+                <input-box (textChange)="textChange($event)"></input-box>
+            </div>
         </div>
+        <div style="height: 30px;"></div>
     </div>
-
     <setting-btn></setting-btn>
 </div>

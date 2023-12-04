@@ -2,7 +2,7 @@
     <i class="iconfont icon-setting"></i>
 </div>
 <div *ngIf="!hideMenu" class="menu" [ngClass]="{'he':isH}">
-    <div [routerLink]="[item.link]" *ngFor="let item of MENU">
+    <div [routerLink]="[item.link]" routerLinkActive="active" *ngFor="let item of MENU">
         <i class="iconfont icon-{{item.icon}}"></i>
     </div>
     <!-- <div [routerLink]="['/joystick']">

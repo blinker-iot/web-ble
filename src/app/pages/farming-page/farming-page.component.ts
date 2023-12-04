@@ -5,11 +5,12 @@ import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.co
 import { DataBoxComponent } from '../../components/data-box/data-box.component';
 import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 import { BleService } from '../../ble.service';
+import { InputBoxComponent } from '../../components/input-box/input-box.component';
 
 @Component({
   selector: 'app-farming-page',
   standalone: true,
-  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent],
+  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent, InputBoxComponent],
   templateUrl: './farming-page.component.html',
   styleUrl: './farming-page.component.scss'
 })
@@ -86,14 +87,9 @@ export class FarmingPageComponent {
       key: 'windmill',
       state: false
     }, {
-      name: '功能1',
+      name: '其他功能',
       icon: 'iconfont icon-setting',
-      key: 'c1',
-      state: false
-    }, {
-      name: '功能2',
-      icon: 'iconfont icon-setting',
-      key: 'c2',
+      key: 'custom',
       state: false
     }
   ]
@@ -106,8 +102,12 @@ export class FarmingPageComponent {
     this.currentName = item.name
   }
 
-  stateChange($event,item) {
-    console.log('stateChange',$event);
+  stateChange($event, item) {
+    console.log('stateChange', $event);
     this.bleService.sendData(`${item.key}:${$event ? 'on' : 'off'}\n`)
+  }
+
+  textChange(text) {
+    this.bleService.sendData(`text:${text}\n`)
   }
 }

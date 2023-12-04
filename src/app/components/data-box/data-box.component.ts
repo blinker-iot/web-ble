@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 export class DataBoxComponent {
   @Input() config;
 
+  get value() {
+    return '-'
+  }
+
   constructor() {
 
   }

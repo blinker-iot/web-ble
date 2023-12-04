@@ -72,9 +72,9 @@ export class SmarthomePageComponent {
       key: 'windmill',
       state: false
     }, {
-      name: '功能1',
+      name: '其他功能',
       icon: 'iconfont icon-setting',
-      key: 'c1',
+      key: 'custom',
       state: false
     }
   ]

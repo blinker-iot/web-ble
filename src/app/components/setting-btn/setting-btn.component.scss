@@ -39,16 +39,23 @@
         border-bottom: 1px solid #CCC;
         cursor: pointer;
     }
+
+    .active {
+        i {
+            color: #389bee;
+        }
+
+    }
 }
 
-.he{
-    i{
+.he {
+    i {
         transform: rotate(90deg);
     }
 }
 
 
-i{
+i {
     color: #404040;
     font-size: 30px;
 }
