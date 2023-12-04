@@ -14,20 +14,22 @@
 
 .turn {
     width: 100%;
-    margin-top: 21vw;
+    margin-top: 20vw;
     display: flex;
     justify-content: center;
 
     .turn-btn {
         width: 21vw;
         height: 21vw;
+        max-width: 80px;
+        max-height: 80px;
         border-radius: 50%;
         background: #FFF;
         box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.11);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10vw;
+        font-size: 3em;
         color: #306CFF;
         transition: all 0.1s;
 
