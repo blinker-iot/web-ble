@@ -11,7 +11,7 @@ import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@a
 export class ToggleComponent implements OnInit {
 
   @Input() color = "#389bee";
-  @Input() switch: any = true
+  @Input() state: any = true
   @Output() stateChange = new EventEmitter()
 
   constructor() { }

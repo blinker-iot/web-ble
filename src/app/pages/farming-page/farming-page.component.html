@@ -4,7 +4,7 @@
     </div>
     <div class="content">
         <div class="data-list">
-            <div class="data-box" *ngFor="let item of items1">
+            <div class="data-box" *ngFor="let item of items1" (click)="selectItem(item)">
                 <data-box [config]="item"></data-box>
             </div>
         </div>
@@ -14,6 +14,7 @@
             </div>
         </div>
         <div class="line">
+            <div class="title">近期 {{currentName}} 数据</div>
             <line-chart></line-chart>
         </div>
         <div class="text">
@@ -21,7 +22,7 @@
         </div>
         <div class="ctrl-list">
             <div class="ctrl-box" *ngFor="let item of items3">
-                <ctrl-box [config]="item"></ctrl-box>
+                <ctrl-box [config]="item" (stateChange)="stateChange($event,item)"></ctrl-box>
             </div>
         </div>
     </div>

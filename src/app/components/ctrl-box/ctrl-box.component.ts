@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToggleComponent } from '../toggle/toggle.component';
 
@@ -11,6 +11,15 @@ import { ToggleComponent } from '../toggle/toggle.component';
 })
 export class CtrlBoxComponent {
   @Input() config;
+  @Output() stateChange = new EventEmitter();
 
-  state = true
+  get state() {
+    return this.config.state;
+  }
+
+  trunCtrlItem() {
+    this.config.state = !this.config.state;
+    this.stateChange.emit(this.config.state);
+  }
+
 }

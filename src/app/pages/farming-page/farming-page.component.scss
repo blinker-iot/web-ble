@@ -57,10 +57,14 @@ setting-btn {
 
 .line {
     margin-top: 15px;
-    padding: 10px;
+    padding: 10px 0 0 10px;
     background: #FFF;
     box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
     border-radius: 8px;
+    .title{
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 
 .text {

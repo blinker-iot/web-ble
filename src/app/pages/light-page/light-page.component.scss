@@ -13,8 +13,9 @@
 }
 
 .turn {
-    width: 100%;
-    margin-top: 20vw;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 90px;
     display: flex;
     justify-content: center;
 

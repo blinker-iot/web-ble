@@ -1,15 +1,19 @@
-<div class="ctrl-box">
+<div class="ctrl-box" (click)="trunCtrlItem()">
     <div class="left">
         <div>
-            <i class="{{config.icon}}"></i>
-            <div>{{config.name}}</div>
-            <div>
-                <ng-container *ngIf="state">已开启</ng-container>
-                <ng-container *ngIf="!state">已关闭</ng-container>
+            <div class="icon-box" [ngClass]="{'on': state}">
+                <i class="{{config.icon}}"></i>
+            </div>
+            <div class="text-box">
+                <div class="name">{{config.name}}</div>
+                <div class="state">
+                    <ng-container *ngIf="state">已开启</ng-container>
+                    <ng-container *ngIf="!state">已关闭</ng-container>
+                </div>
             </div>
         </div>
     </div>
     <div class="toggle">
-        <toggle></toggle>
+        <toggle [state]="state"></toggle>
     </div>
 </div>

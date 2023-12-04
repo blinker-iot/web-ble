@@ -1,5 +1,34 @@
 <div class="page">
-    <!-- <line-chart></line-chart> -->
+    <div class="bg-box">
+        <img src="assets/img/home-bg.jpg" alt="">
+    </div>
+    <div class="content">
+        <div class="data-list">
+            <div class="data-box" *ngFor="let item of items1" (click)="selectItem(item)">
+                <data-box [config]="item"></data-box>
+            </div>
+        </div>
+        <div class="data-list data-list2">
+            <div class="data-box" *ngFor="let item of items2">
+                <data-box [config]="item"></data-box>
+            </div>
+        </div>
+        <div class="line">
+            <div class="title">近期 {{currentName}} 数据</div>
+            <line-chart></line-chart>
+        </div>
+        <div class="text">
+            控制中心
+        </div>
+        <div class="ctrl-list">
+            <div class="ctrl-box" *ngFor="let item of items3">
+                <ctrl-box [config]="item" (stateChange)="stateChange($event)"></ctrl-box>
+            </div>
+            <div class="ctrl-box">
+                <input-box (textChange)="textChange($event)"></input-box>
+            </div>
+        </div>
+    </div>
+
     <setting-btn></setting-btn>
 </div>
-

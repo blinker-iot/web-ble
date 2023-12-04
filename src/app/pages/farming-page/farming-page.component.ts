@@ -4,11 +4,12 @@ import { LineChartComponent } from '../../components/line-chart/line-chart.compo
 import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
 import { DataBoxComponent } from '../../components/data-box/data-box.component';
 import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
+import { BleService } from '../../ble.service';
 
 @Component({
   selector: 'app-farming-page',
   standalone: true,
-  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent,CtrlBoxComponent],
+  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent],
   templateUrl: './farming-page.component.html',
   styleUrl: './farming-page.component.scss'
 })
@@ -47,6 +48,8 @@ export class FarmingPageComponent {
     }
   ]
 
+  currentName = this.items1[0].name
+
   items2 = [
     {
       name: '水质',
@@ -65,27 +68,46 @@ export class FarmingPageComponent {
     {
       name: '灌溉',
       icon: 'iconfont icon-pipe',
-      key: 'irrigation'
+      key: 'irrigation',
+      state: false
     }, {
       name: '通风',
       icon: 'iconfont icon-fan',
-      key: 'fan'
+      key: 'fan',
+      state: false
     }, {
       name: '补光灯',
       icon: 'iconfont icon-light2',
-      key: 'light'
+      key: 'light',
+      state: false
     }, {
       name: '风车',
       icon: 'iconfont icon-windmill',
-      key: 'windmill'
+      key: 'windmill',
+      state: false
     }, {
       name: '功能1',
       icon: 'iconfont icon-setting',
-      key: 'c1'
+      key: 'c1',
+      state: false
     }, {
       name: '功能2',
       icon: 'iconfont icon-setting',
-      key: 'c2'
+      key: 'c2',
+      state: false
     }
   ]
+
+  constructor(
+    private bleService: BleService
+  ) { }
+
+  selectItem(item) {
+    this.currentName = item.name
+  }
+
+  stateChange($event,item) {
+    console.log('stateChange',$event);
+    this.bleService.sendData(`${item.key}:${$event ? 'on' : 'off'}\n`)
+  }
 }
