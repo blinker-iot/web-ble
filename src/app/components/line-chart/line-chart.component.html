@@ -1,1 +1,2 @@
-<div class="chart-box" #chart></div>
+<div class="chart-box" *ngIf="!value">暂无数据</div>
+<div class="chart-box" *ngIf="value" #chart></div>

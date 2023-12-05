@@ -4,12 +4,13 @@ import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.co
 import { ColorPickerComponent } from '../../components/color-picker/colorpicker';
 import { WidgetRangeComponent } from '../../components/widget-range/widget-range';
 import { BleService } from '../../ble.service';
+import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 
 
 @Component({
   selector: 'light-page',
   standalone: true,
-  imports: [CommonModule, SettingBtnComponent, ColorPickerComponent, WidgetRangeComponent],
+  imports: [CommonModule, SettingBtnComponent, ColorPickerComponent, WidgetRangeComponent, DeviceTitleComponent],
   templateUrl: './light-page.component.html',
   styleUrl: './light-page.component.scss'
 })
@@ -27,7 +28,7 @@ export class LightPageComponent {
     this.bleService.sendData(`rgb:${e[0]},${e[1]},${e[2]}\n`)
   }
 
-  brightnessChange(e){
+  brightnessChange(e) {
     this.bleService.sendData(`brightness:${e}\n`)
   }
 

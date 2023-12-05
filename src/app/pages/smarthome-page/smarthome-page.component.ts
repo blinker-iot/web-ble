@@ -34,7 +34,7 @@ export class SmarthomePageComponent {
     }
   ]
 
-  currentName = this.items1[0].name
+  currentItem= this.items1[0]
 
   items2 = [
     {
@@ -86,7 +86,7 @@ export class SmarthomePageComponent {
   }
 
   selectItem(item) {
-    this.currentName = item.name
+    this.currentItem = item
   }
 
   textChange(text) {

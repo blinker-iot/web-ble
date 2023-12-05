@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { createChart, IChartApi, ISeriesApi, LineSeriesPartialOptions, UTCTimestamp } from 'lightweight-charts';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'line-chart',
@@ -13,17 +14,61 @@ export class LineChartComponent {
   @ViewChild('chart') chartContainer: ElementRef;
   private chart: IChartApi;
   private lineSeries: ISeriesApi<"Line">;
-  private data: { time: UTCTimestamp, value: number }[] = [];
-  private intervalId: any;
+  // private data: { time: UTCTimestamp, value: number }[] = [];
+  private intervalTimer: any;
 
-  constructor() { }
+
+  @Input() config;
+
+  get value() {
+    if (this.config.key in this.dataService.manager) {
+      return this.dataService.manager[this.config.key]
+    }
+    return null
+  }
+
+  constructor(
+    public dataService: DataService
+  ) { }
 
   ngAfterViewInit(): void {
+    // this.darwChart()
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalTimer) {
+      clearInterval(this.intervalTimer);
+    }
+    if (this.chart) {
+      this.chart.remove();
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['config']) {
+      // this.darwChart()
+      // 清空数据，重新记录
+    }
+  }
+
+  initd = false;
+  ngDoCheck() {
+    if (this.value !== null && !this.initd) {
+      this.initd = true;
+      setTimeout(() => {
+        this.darwChart();
+      }, 500)
+    }
+  }
+
+  darwChart() {
+    console.log('darwChart');
+    if (this.chart) {
+      this.chart.remove();
+    }
     this.chart = createChart(this.chartContainer.nativeElement, {
       width: this.chartContainer.nativeElement.offsetWidth,
-      // height: 300,
       layout: {
-        // background: '#ffffff',
         textColor: 'rgba(33, 56, 77, 1)',
       },
       grid: {
@@ -39,45 +84,31 @@ export class LineChartComponent {
         secondsVisible: false,
       },
     });
-
-    const lineSeriesOptions: LineSeriesPartialOptions = {
-      // upColor: 'green',
-      // downColor: 'red',
-      // borderVisible: false,
-      // wickVisible: true,
-      // crossHairMarkerVisible: true,
-      // lineStyle: 0,
-      // lineWidth: 2,
-      // lineType: 0,
-      // color: '#2196F3',
-    };
-
+    const lineSeriesOptions: LineSeriesPartialOptions = {};
     this.lineSeries = this.chart.addLineSeries(lineSeriesOptions);
 
-    this.intervalId = setInterval(() => this.updateData(), 1000);
+    this.intervalTimer = setInterval(() => this.updateData(), 1000);
+    console.log(this.intervalTimer);
   }
 
-  updateData(): void {
-    const localTime = new Date();
-    const time: UTCTimestamp = Math.floor(localTime.getTime() / 1000) - localTime.getTimezoneOffset() * 60 as UTCTimestamp;
-    const value = Math.random() * 100; // Replace with actual sensor data
-
-    this.data.push({ time, value });
-
-    // Keep only last minute data
-    while (this.data.length > 0 && (Date.now() / 1000 - this.data[0].time) > 60) {
-      this.data.shift();
+  // oldValue;
+  updateData() {
+    let data = this.dataService.managerSeries[this.config.key]
+    if (data.length == 0)
+      this.lineSeries.setData([]);
+    else {
+      const localTime = new Date();
+      const time: UTCTimestamp = Math.floor(localTime.getTime() / 1000) - localTime.getTimezoneOffset() * 60 as UTCTimestamp;
+      if (time - data[data.length - 1].time > 1) {
+        data.push({ time, value: data[data.length - 1].value });
+      }
+      try {
+        this.lineSeries.setData(data);
+      } catch (e) {
+        console.log(e);
+        console.log(data);
+      }
     }
 
-    this.lineSeries.setData(this.data);
-  }
-
-  ngOnDestroy(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-    if (this.chart) {
-      this.chart.remove();
-    }
   }
 }

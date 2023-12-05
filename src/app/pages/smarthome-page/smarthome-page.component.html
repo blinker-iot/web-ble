@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="line">
-            <div class="title">近期 {{currentName}} 数据</div>
-            <line-chart></line-chart>
+            <div class="title">近期 {{currentItem.name}} 数据</div>
+            <line-chart [config]="currentItem"></line-chart>
         </div>
         <div class="text">
             控制中心

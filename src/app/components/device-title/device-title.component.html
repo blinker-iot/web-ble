@@ -1,0 +1,9 @@
+<div class="device-title" (click)="connect()">
+    <div class="name">
+        <ng-content #name></ng-content>
+    </div>
+    <div class="state">
+        <ng-container *ngIf="device">已连接</ng-container>
+        <ng-container *ngIf="!device">点击连接设备</ng-container>
+    </div>
+</div>

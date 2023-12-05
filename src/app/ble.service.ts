@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { DataService } from './data.service';
 
 const bluetooth = (navigator as any).bluetooth;
 
@@ -16,7 +17,9 @@ export class BleService {
 
   dataChanged = new Subject()
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   browserVersionError = false
 
@@ -40,6 +43,7 @@ export class BleService {
       })
       .then(server => {
         this.server = server;
+        this.device.addEventListener('gattserverdisconnected', (event) => this.onDisconnected(event));
         return server.getPrimaryService(this.serviceUUID);
       })
       .then(service => {
@@ -61,11 +65,8 @@ export class BleService {
   }
 
   sendData(data) {
-    // console.log('sendData', data);
     if (!this.characteristicInstance) {
       console.log('No characteristic to write to!');
-      // if (!this.device)
-      //   this.searchDevice()
       return;
     }
     let encoder = new TextEncoder();
@@ -74,16 +75,36 @@ export class BleService {
         // console.log(`Data sent: ${data}`);
       })
       .catch(error => {
-        console.log(`Send error: ${error}`);
+        // console.log(`Send error: ${error}`);
       });
   }
 
+  tempData = '';
   handleCharacteristicValueChanged(event) {
     let value = event.target.value;
     let decoder = new TextDecoder();
     let decodedValue = decoder.decode(value);
     console.log(`Received data: ${decodedValue}`);
+
+    this.tempData += decodedValue;
+
+    // 检查是否存在'\n'
+    let lastIndex = this.tempData.lastIndexOf('\n');
+    if (lastIndex !== -1) {
+      // 获取最后一个'\n'前的数据并处理
+      let processData = this.tempData.substring(0, lastIndex);
+      this.dataService.processData(processData);
+
+      // 保留'\n'后的数据
+      this.tempData = this.tempData.substring(lastIndex + 1);
+    }
+
     this.dataChanged.next(decodedValue);
+  }
+
+  onDisconnected(event) {
+    console.log(`Device ${this.device.name} is disconnected.`);
+    this.device = null;
   }
 
 }
