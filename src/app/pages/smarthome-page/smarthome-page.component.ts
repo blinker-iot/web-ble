@@ -48,15 +48,15 @@ export class SmarthomePageComponent {
       name: '二氧化碳',
       icon: 'iconfont icon-co2',
       unit: 'ppm',
-      key: 'windSpeed'
+      key: 'co2'
     }
   ]
 
   items3 = [
     {
-      name: '灌溉',
+      name: '窗户',
       icon: 'iconfont icon-pipe',
-      key: 'irrigation',
+      key: 'window',
       state: false
     }, {
       name: '通风',
@@ -69,12 +69,17 @@ export class SmarthomePageComponent {
       key: 'light',
       state: false
     }, {
-      name: '风车',
+      name: '开门',
       icon: 'iconfont icon-windmill',
-      key: 'windmill',
+      key: 'door',
       state: false
     }, {
-      name: '其他功能',
+      name: '音乐',
+      icon: 'iconfont icon-windmill',
+      key: 'music',
+      state: false
+    }, {
+      name: '其他',
       icon: 'iconfont icon-setting',
       key: 'custom',
       state: false

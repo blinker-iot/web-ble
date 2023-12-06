@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="data-list data-list2">
-            <div class="data-box" *ngFor="let item of items2">
+            <div class="data-box" *ngFor="let item of items2" (click)="selectItem(item)">
                 <data-box [config]="item"></data-box>
             </div>
         </div>

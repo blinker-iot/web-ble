@@ -90,7 +90,7 @@ export class FarmingPageComponent {
       key: 'windmill',
       state: false
     }, {
-      name: '其他功能',
+      name: '其他',
       icon: 'iconfont icon-setting',
       key: 'custom',
       state: false
