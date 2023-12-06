@@ -5,25 +5,25 @@
 只要PC具备蓝牙功能，使用Edge或Chrome访问 [https://ble.clz.me](https://ble.clz.me)即可使用  
 
 ## 移动端
-访问 [https://ble.clz.me](https://ble.clz.me)
+访问 [https://ble.clz.me](https://ble.clz.me)  
 仅支持android手机使用，如自带浏览器无法正常使用，请安装Edge或Chrome浏览器
 
 ## 设备支持
 
-市面上的大部分BLE串口透传模块均可使用。
-已测试可用模块：HC-42、JDY-18
-已知不可用的模块型号：JDY-10
+市面上的大部分BLE串口透传模块均可使用。  
+已测试可用模块：HC-42、JDY-18  
+已知不可用的模块型号：JDY-10  
 
 ## 使用说明
 
-点击连接设备后会搜索附近的设备，选择你要连接的设备，然后选择对应的控制界面。下面对每个界面的通信指令进行说明：
-本软件中通信指令统一格式为：
+点击连接设备后会搜索附近的设备，选择你要连接的设备，然后选择对应的控制界面。下面对每个界面的通信指令进行说明：  
+本软件中通信指令统一格式为：  
 
 ```
 key:value\n
 ```
 
-每条指令都以换行符\\n结束
+每条指令都以换行符\\n结束  
 
 ### led控制界面
 
@@ -92,5 +92,4 @@ key:value\n
 见[GITHUB](https://github.com/coloz/web-ble)
 
 ## 赞助商
-
-![](https://arduino.me/storage/v1/object/public/image/32e02a817385b818e8fb309817384211.webp)
+<img src="https://arduino.me/storage/v1/object/public/image/32e02a817385b818e8fb309817384211.webp" style="max-width: 250px">
