@@ -92,4 +92,4 @@ key:value\n
 见[GITHUB](https://github.com/coloz/web-ble)
 
 ## 赞助商
-<img src="https://arduino.me/storage/v1/object/public/image/32e02a817385b818e8fb309817384211.webp" style="max-width: 250px">
+<img src="https://arduino.me/storage/v1/object/public/image/32e02a817385b818e8fb309817384211.webp" width="250">
