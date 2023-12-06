@@ -8,6 +8,17 @@ setting-btn {
     }
 }
 
+device-title{
+    ::ng-deep{
+        .name{
+            color: #e1e1e1 !important;
+        }
+        .state{
+            color: #e9e9e9;
+        }
+    }
+}
+
 .bg-box {
     width: calc(100% + 30px);
     position: absolute;

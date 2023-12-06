@@ -43,7 +43,7 @@ export class JoystickPageComponent {
   }
 
   valueChange(e) {
-    this.bleService.sendData(`JOY:${e}\n`)
+    this.bleService.sendData(`joy:${e}\n`)
   }
 
   timer1;

@@ -6,11 +6,14 @@ import { DataBoxComponent } from '../../components/data-box/data-box.component';
 import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 import { BleService } from '../../ble.service';
 import { InputBoxComponent } from '../../components/input-box/input-box.component';
+import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 
 @Component({
   selector: 'app-farming-page',
   standalone: true,
-  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent, InputBoxComponent],
+  imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent,
+    InputBoxComponent,
+    DeviceTitleComponent],
   templateUrl: './farming-page.component.html',
   styleUrl: './farming-page.component.scss'
 })
@@ -30,7 +33,7 @@ export class FarmingPageComponent {
       name: '光照',
       icon: 'iconfont icon-sun',
       unit: 'LX',
-      key: 'light'
+      key: 'illuminance'
     }, {
       name: '气压',
       icon: 'iconfont icon-pressure',
@@ -49,7 +52,7 @@ export class FarmingPageComponent {
     }
   ]
 
-  currentItem= this.items1[0]
+  currentItem = this.items1[0]
 
   items2 = [
     {

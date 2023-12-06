@@ -6,11 +6,13 @@ import { LineChartComponent } from '../../components/line-chart/line-chart.compo
 import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 import { InputBoxComponent } from '../../components/input-box/input-box.component';
 import { BleService } from '../../ble.service';
+import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 
 @Component({
   selector: 'app-smarthome-page',
   standalone: true,
-  imports: [CommonModule, SettingBtnComponent, DataBoxComponent, LineChartComponent, InputBoxComponent, CtrlBoxComponent],
+  imports: [CommonModule, SettingBtnComponent, DataBoxComponent, LineChartComponent,
+    InputBoxComponent, CtrlBoxComponent, DeviceTitleComponent],
   templateUrl: './smarthome-page.component.html',
   styleUrl: './smarthome-page.component.scss'
 })
@@ -30,18 +32,18 @@ export class SmarthomePageComponent {
       name: '光照',
       icon: 'iconfont icon-sun',
       unit: 'LX',
-      key: 'light'
+      key: 'illuminance'
     }
   ]
 
-  currentItem= this.items1[0]
+  currentItem = this.items1[0]
 
   items2 = [
     {
       name: 'PM2.5',
       icon: 'iconfont icon-pm',
       unit: 'ug/m³',
-      key: 'pressure'
+      key: 'pm25'
     }, {
       name: '二氧化碳',
       icon: 'iconfont icon-co2',
