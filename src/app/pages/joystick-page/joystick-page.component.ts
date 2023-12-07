@@ -5,10 +5,17 @@ import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.co
 import { BleService } from '../../ble.service';
 import { WidgetJoystickComponent } from '../../components/widget-joystick/widget-joystick';
 import { DeviceService } from '../../device.service';
+import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 @Component({
   selector: 'app-joystick-page',
   standalone: true,
-  imports: [CommonModule, HammerModule, SettingBtnComponent, WidgetJoystickComponent, HammerModule],
+  imports: [CommonModule,
+    HammerModule,
+    SettingBtnComponent,
+    WidgetJoystickComponent,
+    HammerModule,
+    DeviceTitleComponent
+  ],
   templateUrl: './joystick-page.component.html',
   styleUrl: './joystick-page.component.scss'
 })
@@ -52,7 +59,7 @@ export class JoystickPageComponent {
   timer4;
   startSend(btn) {
     console.log('startSend：', btn);
-    
+
     switch (btn) {
       case 'B1':
         if (!this.timer1) {
@@ -113,7 +120,7 @@ export class JoystickPageComponent {
     }
   }
 
-  tap(btn){
+  tap(btn) {
     this.bleService.sendData(`${btn}:press\n`)
   }
 

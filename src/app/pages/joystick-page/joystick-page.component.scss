@@ -18,6 +18,20 @@
     }
 }
 
+device-title {
+    ::ng-deep {
+        .device-title {
+            transform: rotate(90deg);
+            position: absolute;
+            top: calc(50vh - 36px);
+            right: 0;
+            z-index: 9;
+        }
+
+
+    }
+}
+
 $block-size: 70px;
 
 .btn {
@@ -114,6 +128,14 @@ $block-size: 70px;
 // PC端
 @media screen and (min-width: 501px) {
     $block-size: 60px;
+
+    device-title {
+        ::ng-deep {
+            .device-title {
+                top: calc(663px - 350px) !important;
+            }
+        }
+    }
 
     .btn-box {
         width: 180px;
