@@ -4,6 +4,9 @@
     </div>
     <device-title>智慧农场</device-title>
     <div class="content">
+        <div class="text">
+            数据面板
+        </div>
         <div class="data-list">
             <div class="data-box" *ngFor="let item of items1" (click)="selectItem(item)">
                 <data-box [config]="item"></data-box>

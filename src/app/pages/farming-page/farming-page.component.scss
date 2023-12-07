@@ -32,7 +32,7 @@ device-title{
 }
 
 .content {
-    margin-top: 70px;
+    // margin-top: 70px;
     position: absolute;
     width: calc(100% - 30px);
     z-index: 1;
@@ -77,17 +77,19 @@ device-title{
 
 .text {
     margin-top: 15px;
+    margin-bottom: 15px;
     background: none;
     box-shadow: none;
     border-radius: none;
     font-weight: bold;
+    text-shadow: 1px 1px 0 #b6b6b6;
+    color: #222222;
 }
 
 .ctrl-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-top: 15px;
 
     >div {
         background: #FFF;
@@ -106,7 +108,7 @@ device-title{
 
 @media screen and (min-width: 500px) {
     .content {
-        margin-top: 45px;
+        margin-top: 25px;
     }
 
     .data-list {
