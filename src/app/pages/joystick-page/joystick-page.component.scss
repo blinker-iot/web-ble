@@ -45,7 +45,7 @@ $block-size: 70px;
     color: #FFF;
     font-size: 24px;
 
-    &:active {
+    &:active,&:focus {
         transform: scale(0.95) rotate(90deg);
         background-color: rgb(51, 163, 255);
     }
