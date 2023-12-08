@@ -2,11 +2,13 @@
 注意：本软件需要使用Edge或Chrome等现代浏览器方可正常使用
 
 ## PC端
-只要PC具备蓝牙功能，使用Edge或Chrome访问 [https://ble.clz.me](https://ble.clz.me)即可使用  
+访问 [https://ble.openjumper.com](https://ble.openjumper.com) 即可使用  
+需要使用Edge或Chrome访问  
+需要PC具备蓝牙功能，如果不具备蓝牙功能，可以通过usb蓝牙适配器扩展  
 
 ## 移动端
-访问 [https://ble.clz.me](https://ble.clz.me)  
-仅支持android手机使用，如自带浏览器无法正常使用，请安装Edge或Chrome浏览器
+访问 [https://ble.openjumper.com](https://ble.openjumper.com) 即可使用  
+仅支持android手机使用，如自带浏览器无法正常使用，请安装Edge或Chrome浏览器  
 
 ## 设备支持
 
