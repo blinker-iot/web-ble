@@ -12,25 +12,32 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18.x'
-      
-      - name: Dependent environment
+      - name: Test
         run: |
-          npm i -g @angular/cli
-          npm i
+          echo ${{ secrets.DEPLOY_DIR }}
+          echo ${{ secrets.DEPLOY_HOST }}
+          echo ${{ secrets.DEPLOY_USER }}
+          echo ${{ secrets.DEPLOY_SECRET }}
+
+      # - name: Use Node.js 18.x
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '18.x'
       
-      - name: Compile
-        run: |
-          npm run build
+      # - name: Dependent environment
+      #   run: |
+      #     npm i -g @angular/cli
+      #     npm i
       
-      - name: Deploy
-        uses: garygrossgarten/github-action-scp@v0.5.3
-        with:
-          local: dist/web-ble
-          remote: ${{ secrets.DEPLOY_DIR }}
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          privateKey: ${{ secrets.DEPLOY_SECRET }}
+      # - name: Compile
+      #   run: |
+      #     npm run build
+      
+      # - name: Deploy
+      #   uses: garygrossgarten/github-action-scp@v0.5.3
+      #   with:
+      #     local: dist/web-ble
+      #     remote: ${{ secrets.DEPLOY_DIR }}
+      #     host: ${{ secrets.DEPLOY_HOST }}
+      #     username: ${{ secrets.DEPLOY_USER }}
+      #     privateKey: ${{ secrets.DEPLOY_SECRET }}
