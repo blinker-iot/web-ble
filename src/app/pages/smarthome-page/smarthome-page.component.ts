@@ -95,12 +95,14 @@ export class SmarthomePageComponent {
   selectItem(item) {
     this.currentItem = item
   }
+  
+  stateChange($event, item) {
+    console.log('stateChange', $event);
+    this.bleService.sendData(`${item.key}:${$event ? 'on' : 'off'}\n`)
+  }
 
   textChange(text) {
     this.bleService.sendData(`text:${text}\n`)
   }
 
-  stateChange($event) {
-    this.bleService.sendData(`${$event.key}:${$event.state ? 'on' : 'off'}\n`)
-  }
 }
