@@ -15,9 +15,9 @@ jobs:
       - name: Test
         run: |
           echo ${{ secrets.DEPLOY_DIR }}
-          echo ${{ secrets.DEPLOY_HOST }}
-          echo ${{ secrets.DEPLOY_USER }}
-          echo ${{ secrets.DEPLOY_SECRET }}
+          # echo ${{ secrets.DEPLOY_HOST }}
+          # echo ${{ secrets.DEPLOY_USER }}
+          # echo ${{ secrets.DEPLOY_SECRET }}
 
       # - name: Use Node.js 18.x
       #   uses: actions/setup-node@v1
