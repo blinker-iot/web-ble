@@ -1,0 +1,43 @@
+@import "../page.scss";
+
+.color-picker-box {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.widget-range-box {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.turn {
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 90px;
+    display: flex;
+    justify-content: center;
+
+    .turn-btn {
+        width: 21vw;
+        height: 21vw;
+        max-width: 80px;
+        max-height: 80px;
+        border-radius: 50%;
+        background: #FFF;
+        box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.11);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        color: #306CFF;
+        transition: all 0.1s;
+
+        &:active {
+            transform: scale(0.92);
+        }
+    }
+
+
+}

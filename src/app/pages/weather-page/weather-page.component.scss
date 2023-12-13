@@ -1,0 +1,119 @@
+@import "../page.scss";
+
+setting-btn {
+    ::ng-deep {
+        i.icon-setting {
+            color: #FFF;
+        }
+    }
+}
+
+device-title{
+    ::ng-deep{
+        .name{
+            color: #e1e1e1 !important;
+        }
+        .state{
+            color: #e9e9e9;
+        }
+    }
+}
+
+.bg-box {
+    width: calc(100% + 15px);
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    // margin-top: 70px;
+    position: absolute;
+    width: calc(100% - 30px);
+    z-index: 1;
+}
+
+.data-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 15px;
+
+    >div {
+        background: #FFF;
+        box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
+        border-radius: 8px;
+    }
+
+    .data-box {
+        position: relative;
+        width: 100%;
+        height: 65px;
+    }
+
+
+}
+
+.data-list2 {
+    margin-top: 15px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.line {
+    margin-top: 15px;
+    padding: 10px 0 0 10px;
+    background: #FFF;
+    box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
+    border-radius: 8px;
+    .title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+.text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: none;
+    box-shadow: none;
+    border-radius: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #b6b6b6;
+    color: #222222;
+}
+
+.ctrl-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    >div {
+        background: #FFF;
+        box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
+        border-radius: 8px;
+    }
+
+    .ctrl-box {
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+}
+
+
+
+@media screen and (min-width: 500px) {
+    .content {
+        margin-top: 25px;
+    }
+
+    .data-list {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

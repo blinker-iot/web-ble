@@ -9,15 +9,15 @@ import { InputBoxComponent } from '../../components/input-box/input-box.componen
 import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 
 @Component({
-  selector: 'app-farming-page',
+  selector: 'app-weather-page',
   standalone: true,
   imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent,
     InputBoxComponent,
     DeviceTitleComponent],
-  templateUrl: './farming-page.component.html',
-  styleUrl: './farming-page.component.scss'
+  templateUrl: './weather-page.component.html',
+  styleUrl: './weather-page.component.scss'
 })
-export class FarmingPageComponent {
+export class WeatherPageComponent {
   items1 = [
     {
       name: '环境温度',

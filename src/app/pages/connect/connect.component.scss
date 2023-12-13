@@ -69,6 +69,7 @@
 .btn-box {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     font-size: 11px;
     margin-top: 15px;
 
@@ -77,6 +78,8 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        width: 33.33%;
+        margin-bottom: 15px;
 
         .icon-box {
             height: 44px;
