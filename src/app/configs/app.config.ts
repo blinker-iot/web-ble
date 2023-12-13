@@ -5,6 +5,11 @@ export const MENU = [
         link: '/light'
     },
     {
+        name: 'PPT遥控器',
+        icon: 'ppt',
+        link: '/ppt'
+    },
+    {
         name: '小车遥控器',
         icon: 'joystick',
         link: '/joystick'
@@ -18,5 +23,10 @@ export const MENU = [
         name: '智慧农场',
         icon: 'farming',
         link: '/farming'
+    },
+    {
+        name: '气象站',
+        icon: 'weather',
+        link: '/weather'
     },
 ]

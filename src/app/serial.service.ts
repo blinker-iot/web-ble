@@ -14,16 +14,14 @@ export class SerialService {
 
   constructor() { }
 
-  async searchDevice() {
+  async connectPort() {
     try {
       this.port = await serial.requestPort();
       await this.port.open({ baudRate: 9600 });
-
       // 发送字符串"Hello Serial"
       const textEncoder = new TextEncoder();
       const data = textEncoder.encode("Hello Serial");
       await this.sendData(data);
-
     } catch (error) {
       // 处理连接或发送数据时的错误
       console.error('There was an error opening the serial port:', error);

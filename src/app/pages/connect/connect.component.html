@@ -1,6 +1,6 @@
 <div class="page">
     <div class="logo-box"><img src="assets/oj-logo.png" alt=""></div>
-    <div class="text">点灯物联网-蓝牙教育版</div>
+    <div class="text">点灯物联网-教育版</div>
     <!-- <div class="help"><a>?</a></div> -->
     <div class="connect-box">
         <!-- <div class="text">0. 阅读本软件使用说明</div> -->
@@ -8,7 +8,7 @@
         <button class="connect-btn" (click)="search()" *ngIf="!device">连接设备</button>
         <button class="connect-btn" (click)="disconnect()" *ngIf="device">已连接 {{device.name}}</button>
     </div>
-    <div class="text" style="margin-top: 30px;">2. 选择设备操作界面</div>
+    <div class="text" style="margin-top: 20px;">2. 选择设备操作界面</div>
     <div class="btn-box">
         <div [routerLink]="[item.link]" *ngFor="let item of MENU">
             <div class="icon-box">
@@ -27,6 +27,6 @@
         <div>
             <img src="assets/diandeng-logo.png" alt="">
         </div>
-        奈何col v0.16
+        奈何col v0.17
     </div>
 </div>
