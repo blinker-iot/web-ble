@@ -158,6 +158,55 @@
       "font_class": "music",
       "unicode": "e658",
       "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "38567626",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "38567627",
+      "name": "v",
+      "font_class": "v",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "38567628",
+      "name": "v-",
+      "font_class": "v-",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "38567629",
+      "name": "up",
+      "font_class": "up",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "38567630",
+      "name": "exit",
+      "font_class": "exit",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "38567631",
+      "name": "remote-control",
+      "font_class": "remote-control",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "38567632",
+      "name": "weather-station",
+      "font_class": "weather-station",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
     }
   ]
 }

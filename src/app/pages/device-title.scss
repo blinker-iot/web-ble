@@ -1,0 +1,13 @@
+device-title {
+    ::ng-deep {
+        .device-title {
+            .name {
+                text-shadow: none !important;
+            }
+
+            .state {
+                text-shadow: none !important;
+            }
+        }
+    }
+}
