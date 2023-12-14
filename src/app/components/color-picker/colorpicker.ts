@@ -156,7 +156,7 @@ export class ColorPickerComponent {
   loadColorImg() {
     this.context = this.myCanvas.nativeElement.getContext("2d");
     this.image = new Image();
-    this.image.src = `assets/img/colorpicker.png`;
+    this.image.src = `assets/img/colorpicker.webp`;
     this.image.onload = () => {
       window.setTimeout(() => {
         this.length = this.pickerbox.nativeElement.clientHeight;
