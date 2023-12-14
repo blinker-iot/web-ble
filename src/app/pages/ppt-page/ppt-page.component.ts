@@ -21,24 +21,7 @@ export class PptPageComponent {
   ) {
   }
 
-  color;
-
-  colorChange(e) {
-    this.color = `rgb(${e[0]},${e[1]}, ${e[2]})`
-    this.bleService.sendData(`rgb:${e[0]},${e[1]},${e[2]}\n`)
-  }
-
-  brightnessChange(e) {
-    this.bleService.sendData(`brightness:${e}\n`)
-  }
-
-  state = 'off'
-  turn() {
-    if (this.state == 'on') {
-      this.state = 'off'
-    } else {
-      this.state = 'on'
-    }
-    this.bleService.sendData(`turn:${this.state}\n`)
+  send(data) {
+    this.bleService.sendData(data + '\n');
   }
 }

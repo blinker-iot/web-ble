@@ -111,4 +111,19 @@ export class BleService {
     this.device = null;
   }
 
+  disconnect() {
+    if (this.device) {
+      console.log(`Disconnecting from ${this.device.name}...`);
+      if (this.device.gatt.connected) {
+        this.device.gatt.disconnect();
+        console.log(`Device ${this.device.name} is disconnected.`);
+      } else {
+        console.log(`Device ${this.device.name} is already disconnected.`);
+      }
+      this.device = null;
+    } else {
+      console.log('No device is connected.');
+    }
+  }
+
 }
