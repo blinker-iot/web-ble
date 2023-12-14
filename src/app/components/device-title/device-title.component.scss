@@ -9,6 +9,7 @@
         font-weight: 700;
         color:#595959;
         position: relative;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     }
 
     .state {
@@ -20,5 +21,6 @@
         justify-content: center;
         transition: height 0.5s, opacity 1s;
         opacity: 0.6;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     }
 }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1701098123746') format('truetype');
+  src: url('iconfont.ttf?t=1702547226385') format('truetype');
 }
 
 .iconfont {
@@ -97,5 +97,33 @@
 
 .icon-music:before {
   content: "\e658";
+}
+
+.icon-play:before {
+  content: "\e659";
+}
+
+.icon-v:before {
+  content: "\e65a";
+}
+
+.icon-v-:before {
+  content: "\e65b";
+}
+
+.icon-up:before {
+  content: "\e65c";
+}
+
+.icon-exit:before {
+  content: "\e65d";
+}
+
+.icon-remote-control:before {
+  content: "\e65e";
+}
+
+.icon-weather-station:before {
+  content: "\e65f";
 }
 

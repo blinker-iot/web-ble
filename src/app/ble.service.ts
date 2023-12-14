@@ -12,8 +12,12 @@ export class BleService {
   device = null;
   server = null;
   characteristicInstance = null;
+  
   serviceUUID = '0000ffe0-0000-1000-8000-00805f9b34fb'
   characteristicUUID = '0000ffe1-0000-1000-8000-00805f9b34fb'
+
+  // characteristicUUID_read = '0000ffe1-0000-1000-8000-00805f9b34fb'
+  // characteristicUUID_write = '0000ffe1-0000-1000-8000-00805f9b34fb'
 
   dataChanged = new Subject()
 
