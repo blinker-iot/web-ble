@@ -1,43 +1,177 @@
 @import "../page.scss";
 @import "../device-title.scss";
-.color-picker-box {
-    margin-top: 50px;
-    position: relative;
-    width: 100%;
-}
 
-.widget-range-box {
-    margin-top: 30px;
-    position: relative;
-    width: 100%;
-}
 
-.turn {
-    width: calc(100% - 30px);
-    position: absolute;
-    bottom: 90px;
+
+.top {
+    margin-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
-    .turn-btn {
-        width: 21vw;
-        height: 21vw;
-        max-width: 80px;
-        max-height: 80px;
+    >div {
+        width: 18vw;
+        height: 18vw;
         border-radius: 50%;
-        background: #FFF;
-        box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.11);
+        background: #FFFFFF;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3em;
-        color: #306CFF;
-        transition: all 0.1s;
+        color: #1D9BF0;
+        font-size: 20px;
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.11);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        i {
+            font-size: 1.5em;
+        }
 
-        &:active {
-            transform: scale(0.92);
+        &.active,
+        &:hover {
+            background: #1D9BF0;
+
+            i {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-box {
+        margin: 5vh;
+        height: 65vw;
+        padding: 2vw;
+        border-radius: 20vw;
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.11);
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        >div {
+            width: 24vw;
+            height: 24vw;
+            border-radius: 12vw;
+            background: #D1D6E2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            i {
+                color: #FFFFFF;
+                font-size: 2em;
+            }
+
+            i.down {
+                transform: rotate(180deg);
+            }
+
+            &.active,
+            &:hover {
+                background: #1D9BF0;
+            }
+        }
+    }
+}
+
+.bot-box {
+    position: absolute;
+    bottom: 25px;
+    width: calc(100% - 30px);
+}
+
+.bot1,
+.bot2 {
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+
+    >div {
+        width: 18vw;
+        height: 18vw;
+        border-radius: 50%;
+        background: #D1D6E2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        .iconfont {
+            font-size: 1em;
+        }
+
+        font-size: 1.8em;
+
+        &.active,
+        &:hover {
+            background: #1D9BF0;
+        }
+    }
+}
+
+
+// PC访问时
+@media screen and (min-width: 768px) {
+    .top {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        >div {
+            width: 45px;
+            height: 45px;
+
+            i {
+                font-size: 20px;
+            }
         }
     }
 
+    .mid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        .btn-box {
+            height: 200px;
+            padding: 8px;
+
+            >div {
+                width: 66px;
+                height: 66px;
+
+                i {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .bot1,
+    .bot2 {
+        >div {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+
+            i {
+                font-size: 20px !important;
+            }
+        }
+    }
 }
