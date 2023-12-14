@@ -1,12 +1,12 @@
 export const MENU = [
     {
-        name: 'LED控制',
+        name: '灯光控制',
         icon: 'light',
         link: '/light'
     },
     {
-        name: 'PPT遥控器',
-        icon: 'ppt',
+        name: '遥控器',
+        icon: 'remote-control',
         link: '/ppt'
     },
     {
@@ -26,7 +26,7 @@ export const MENU = [
     },
     {
         name: '气象站',
-        icon: 'weather',
+        icon: 'weather-station',
         link: '/weather'
     },
 ]
