@@ -14,7 +14,7 @@ import { MENU } from '../../configs/app.config';
 })
 export class ConnectComponent {
 
-  MENU=MENU
+  MENU = MENU
 
   get device() {
     return this.bleService.device
@@ -22,15 +22,13 @@ export class ConnectComponent {
 
   constructor(
     private bleService: BleService,
-    // private serialService: SerialService
   ) { }
 
   search() {
     this.bleService.searchDevice();
-    // this.serialService.searchDevice();
   }
 
   disconnect() {
-
+    this.bleService.disconnect();
   }
 }

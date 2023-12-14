@@ -17,16 +17,22 @@ export const MENU = [
     {
         name: '智能家居',
         icon: 'smarthome',
-        link: '/smarthome'
+        link: '/iot/smarthome'
     },
     {
         name: '智慧农场',
         icon: 'farming',
-        link: '/farming'
+        link: '/iot/farming'
     },
     {
         name: '气象站',
         icon: 'weather-station',
-        link: '/weather'
+        link: '/iot/weather'
+    },
+    {
+        name: '首页',
+        icon: 'home_light',
+        link: '/connect',
+        root: true
     },
 ]

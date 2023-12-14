@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1702547226385') format('truetype');
+  src: url('iconfont.ttf?t=1702560770149') format('truetype');
 }
 
 .iconfont {
@@ -9,6 +9,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home_light:before {
+  content: "\e7d4";
+}
+
+.icon-bluetooth:before {
+  content: "\e633";
+}
+
+.icon-zimu:before {
+  content: "\e8ca";
 }
 
 .icon-wind-direction:before {

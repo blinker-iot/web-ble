@@ -5,17 +5,23 @@
     <div class="connect-box">
         <!-- <div class="text">0. 阅读本软件使用说明</div> -->
         <div class="text">1. 连接蓝牙BLE设备</div>
-        <button class="connect-btn" (click)="search()" *ngIf="!device">连接设备</button>
-        <button class="connect-btn" (click)="disconnect()" *ngIf="device">已连接 {{device.name}}</button>
+        <div>
+            <button class="connect-btn" (click)="search()" *ngIf="!device">连接设备</button>
+            <button class="connect-btn" *ngIf="device">已连接 {{device.name}}</button>
+            <button class="connect-btn" (click)="disconnect()" *ngIf="device">断开</button>
+        </div>
+
     </div>
     <div class="text" style="margin-top: 20px;">2. 选择设备操作界面</div>
     <div class="btn-box">
-        <div [routerLink]="[item.link]" *ngFor="let item of MENU">
-            <div class="icon-box">
-                <i class="iconfont icon-{{item.icon}}"></i>
+        <ng-container *ngFor="let item of MENU">
+            <div *ngIf="!item.root" [routerLink]="[item.link]">
+                <div class="icon-box">
+                    <i class="iconfont icon-{{item.icon}}"></i>
+                </div>
+                {{item.name}}
             </div>
-            {{item.name}}
-        </div>
+        </ng-container>
     </div>
     <div class="add">
         <div class="text"></div>
@@ -27,6 +33,6 @@
         <div>
             <img src="assets/diandeng-logo.png" alt="">
         </div>
-        奈何col v0.18
+        奈何col v0.19
     </div>
 </div>

@@ -21,6 +21,7 @@ export class LineChartComponent {
   @Input() config;
 
   get value() {
+    if (!this.config) return null;
     if (this.config.key in this.dataService.manager) {
       return this.dataService.manager[this.config.key]
     }
