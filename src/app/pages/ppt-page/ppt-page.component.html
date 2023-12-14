@@ -1,37 +1,37 @@
 <div class="page">
     <device-title>PPT控制器</device-title>
     <div class="top">
-        <div>
+        <div (click)="send('PLAY')">
             <i class="iconfont icon-play"></i>
         </div>
-        <div>
+        <div (click)="send('EXIT')">
             <i class="iconfont icon-exit"></i>
         </div>
     </div>
     <div class="mid">
         <div class="btn-box">
-            <div>
+            <div (click)="send('PREV')">
                 <i class="iconfont icon-up"></i>
             </div>
-            <div>
+            <div (click)="send('NEXT')">
                 <i class="iconfont icon-up down"></i>
             </div>
         </div>
     </div>
     <div class="bot-box">
         <div class="bot1">
-            <div>
+            <div (click)="send('V-')">
                 <i class="iconfont icon-v-"></i>
             </div>
-            <div>
+            <div (click)="send('V+')">
                 <i class="iconfont icon-v"></i>
             </div>
         </div>
         <div class="bot2">
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
+            <div (click)="send('A')">A</div>
+            <div (click)="send('B')">B</div>
+            <div (click)="send('C')">C</div>
+            <div (click)="send('D')">D</div>
         </div>
     </div>
     <setting-btn></setting-btn>
