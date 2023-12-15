@@ -30,6 +30,21 @@ export const MENU = [
         link: '/iot/weather'
     },
     {
+        name: '健康监测',
+        icon: 'smarthome',
+        link: '/iot/smarthome'
+    },
+    {
+        name: '环境检测',
+        icon: 'farming',
+        link: '/iot/farming'
+    },
+    {
+        name: '工业自动化',
+        icon: 'weather-station',
+        link: '/iot/weather'
+    },
+    {
         name: '首页',
         icon: 'home_light',
         link: '/connect',
