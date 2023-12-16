@@ -40,9 +40,6 @@ export class IotPageComponent {
         case 'smarthome':
           this.config = SMARTHOME_CONFIG
           break;
-        case 'smarthome':
-          this.config = SMARTHOME_CONFIG
-          break;
         case 'weather':
           this.config = WEATHERSTATION_CONFIG
           break;
