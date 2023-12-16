@@ -155,7 +155,7 @@ export const SMARTHOME_CONFIG = {
         type: 'number'
     }, {
         name: 'TVOC',
-        icon: 'iconfont icon-tvoc',
+        icon: 'iconfont icon-pm',
         unit: 'mg/m³',
         key: 'tvoc',
         type: 'number'
@@ -270,16 +270,16 @@ export const WEATHERSTATION_CONFIG = {
     background: 'assets/img/weatherstation-bg.webp',
     widgets: [{
         name: '风速',
-        icon: 'iconfont icon-windspeed',
+        icon: 'iconfont icon-wind-speed',
         unit: 'm/s',
-        key: 'wswindspeed',
+        key: 'windspeed',
         type: 'number'
     }, {
         name: '风向',
-        icon: 'iconfont icon-winddirection',
-        key: 'wswinddirection',
+        icon: 'iconfont icon-wind-direction',
+        key: 'winddirection',
         state: false,
-        type: 'input'
+        type: 'number'
     }, {
         name: '雨量',
         icon: 'iconfont icon-rainfall',
@@ -316,7 +316,7 @@ export const WEATHERSTATION_CONFIG = {
         icon: 'iconfont icon-pm',
         key: 'pm',
         state: false,
-        type: 'input'
+        type: 'number'
     }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
@@ -355,20 +355,20 @@ export const HEALTH_CONFIG = {
         type: 'number'
     }, {
         name: '体温',
-        icon: 'iconfont icon-s-bodytemperature',
+        icon: 'iconfont icon-temperature',
         unit: '℃',
-        key: 'mytemp',
+        key: 'temperature',
         type: 'number'
     }, {
         name: '睡眠状态',
-        icon: 'iconfont icon-Sleepstate',
-        key: 'slpstate',
+        icon: 'iconfont icon-sleep',
+        key: 'sleep',
         type: 'number'
     }, {
         name: '电导率',
-        icon: 'iconfont icon-GSR',
+        icon: 'iconfont icon-gsr',
         unit: 'μS',
-        key: 'myGSR',
+        key: 'gsr',
         type: 'number'
     },
     {
@@ -396,75 +396,75 @@ export const ENVIRON_CONFIG = {
     name: '环境监测',
     background: 'assets/img/environment-bg.webp',
     widgets: [{
-        name: '环境温度',
+        name: '温度',
         icon: 'iconfont icon-temperature',
         unit: '℃',
         key: 'entemp',
         type: 'number'
     }, {
-        name: '环境湿度',
+        name: '湿度',
         icon: 'iconfont icon-humidity',
         unit: '%',
-        key: 'enhumi',
+        key: 'humi',
         type: 'number'
     }, {
         name: '气压',
         icon: 'iconfont icon-pressure',
         unit: 'KPa',
-        key: 'enpressure',
+        key: 'pressure',
         type: 'number'
     }, {
-        name: '光照传感器',
+        name: '光照',
         icon: 'iconfont icon-sun',
         unit: 'LX',
-        key: 'ensun',
+        key: 'sun',
         type: 'number'
     }, {
-        name: '空气质量传感器',
+        name: '空气质量',
         icon: 'iconfont icon-pm',
-        unit: 'ppm',
-        key: 'enair',
+        unit: 'pm',
+        key: 'air',
         type: 'number'
     }, {
-        name: '噪音监测',
+        name: '噪音',
         icon: 'iconfont icon-noise',
         unit: 'db',
-        key: 'ennoise',
+        key: 'noise',
         type: 'number'
     },
     {
         name: 'PH值',
-        icon: 'iconfont icon-phvalue',
-        key: 'phvalue',
+        icon: 'iconfont icon-ph',
+        key: 'ph',
         type: 'number'
     }, {
-        name: '河道水位',
-        icon: 'iconfont icon-waterlevel',
+        name: '水位',
+        icon: 'iconfont icon-water-level',
         unit: 'm',
-        key: 'rwaterh',
+        key: 'waterlevel',
         type: 'number'
     }, {
-        name: '水质检测',
-        icon: 'iconfont icon-tds',
+        name: '水质TDS',
+        icon: 'iconfont icon-water',
         unit: 'mg/L',
         key: 'tds',
         type: 'number'
     }, {
         name: '紫外线',
-        icon: 'iconfont icon-ultravioletrays',
+        icon: 'iconfont icon-ultraviolet',
         unit: 'w/㎡',
-        key: 'ultravioletrays',
+        key: 'ultraviolet',
         type: 'number'
     }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
-        key: 'endisplay',
+        key: 'display',
         state: false,
         type: 'input'
     }, {
         name: '语音播报',
         icon: 'iconfont icon-voiceplay',
-        key: 'envoice',
+        key: 'voice',
         state: false,
         type: 'switch'
     }]
@@ -473,89 +473,88 @@ export const ENVIRON_CONFIG = {
 export const INDUSTRY_CONFIG = {
     name: '工业自动化',
     background: 'assets/img/industry-bg.webp',
-    widgets: [{
-        name: '开关状态',
-        icon: 'iconfont icon-switchstate',
-        key: 'indonoff',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '电流',
-        icon: 'iconfont icon-current',
-        unit: 'A',
-        key: 'poweri',
-        type: 'number'
-    }, {
-        name: '电压',
-        icon: 'iconfont icon-voltage',
-        unit: 'V',
-        key: 'powerv',
-        type: 'number'
-    }, {
-        name: '功率',
-        icon: 'iconfont icon-power',
-        unit: 'W',
-        key: 'powerp',
-        type: 'number'
-    }, {
-        name: '颜色',
-        icon: 'iconfont icon-color',
-        key: 'colour',
-        state: false,
-        type: 'input'
-    }, {
-        name: '重量',
-        icon: 'iconfont icon-weight',
-        unit: 'kg',
-        key: 'weight',
-        type: 'number'
-    },
-    {
-        name: '计数',
-        icon: 'iconfont icon-count',
-        key: 'count',
-        type: 'number'
-    }, {
-        name: '身份信息',
-        icon: 'iconfont icon-idinf',
-        key: 'idinf',
-        state: false,
-        type: 'input'
-    }, {
-        name: '屏幕显示',
-        icon: 'iconfont icon-display',
-        key: 'inddisplay',
-        state: false,
-        type: 'input'
-    }, {
-        name: '语音播报',
-        icon: 'iconfont icon-voiceplay',
-        key: 'indvoice',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '继电器1',
-        icon: 'iconfont icon-relay1',
-        key: 'relay1',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '继电器2',
-        icon: 'iconfont icon-relay2',
-        key: 'relay2',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '继电器3',
-        icon: 'iconfont icon-relay3',
-        key: 'relay3',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '继电器4',
-        icon: 'iconfont icon-relay4',
-        key: 'relay4',
-        state: false,
-        type: 'switch'
-    }]
+    widgets: [
+        {
+            name: '开关状态',
+            icon: 'iconfont icon-switchstate',
+            key: 'indonoff',
+            type: 'number'
+        }, {
+            name: '电流',
+            icon: 'iconfont icon-current',
+            unit: 'A',
+            key: 'current',
+            type: 'number'
+        }, {
+            name: '电压',
+            icon: 'iconfont icon-voltage',
+            unit: 'V',
+            key: 'voltage',
+            type: 'number'
+        }, {
+            name: '功率',
+            icon: 'iconfont icon-power',
+            unit: 'W',
+            key: 'powerp',
+            type: 'number'
+        }, {
+            name: '颜色',
+            icon: 'iconfont icon-color',
+            key: 'colour',
+            type: 'number'
+        }, {
+            name: '重量',
+            icon: 'iconfont icon-weight',
+            unit: 'kg',
+            key: 'weight',
+            type: 'number'
+        },
+        {
+            name: '计数',
+            icon: 'iconfont icon-count',
+            key: 'count',
+            type: 'number'
+        }, {
+            name: '身份信息',
+            icon: 'iconfont icon-idinf',
+            key: 'idinf',
+            state: false,
+            type: 'input'
+        }, {
+            name: '屏幕显示',
+            icon: 'iconfont icon-display',
+            key: 'inddisplay',
+            state: false,
+            type: 'input'
+        }, {
+            name: '语音播报',
+            icon: 'iconfont icon-voiceplay',
+            key: 'indvoice',
+            state: false,
+            type: 'switch'
+        }, {
+            name: '继电器1',
+            icon: 'iconfont icon-relay',
+            key: 'relay1',
+            state: false,
+            type: 'switch'
+        }, {
+            name: '继电器2',
+            icon: 'iconfont icon-relay',
+            key: 'relay2',
+            state: false,
+            type: 'switch'
+        }, {
+            name: '继电器3',
+            icon: 'iconfont icon-relay',
+            key: 'relay3',
+            state: false,
+            type: 'switch'
+        }, {
+            name: '继电器4',
+            icon: 'iconfont icon-relay',
+            key: 'relay4',
+            state: false,
+            type: 'switch'
+        }]
 }

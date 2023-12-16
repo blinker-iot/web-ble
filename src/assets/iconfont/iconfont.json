@@ -147,8 +147,8 @@
     },
     {
       "icon_id": "38587489",
-      "name": "GSR",
-      "font_class": "GSR",
+      "name": "gsr",
+      "font_class": "gsr",
       "unicode": "e652",
       "unicode_decimal": 58962
     },
@@ -158,13 +158,6 @@
       "font_class": "count",
       "unicode": "e653",
       "unicode_decimal": 58963
-    },
-    {
-      "icon_id": "38587491",
-      "name": "co2",
-      "font_class": "co2",
-      "unicode": "e654",
-      "unicode_decimal": 58964
     },
     {
       "icon_id": "38587492",
@@ -210,8 +203,8 @@
     },
     {
       "icon_id": "38587498",
-      "name": "phvalue",
-      "font_class": "phvalue",
+      "name": "ph",
+      "font_class": "ph",
       "unicode": "e65b",
       "unicode_decimal": 58971
     },
@@ -224,8 +217,8 @@
     },
     {
       "icon_id": "38587500",
-      "name": "pm",
-      "font_class": "pm",
+      "name": "co2",
+      "font_class": "co2",
       "unicode": "e65d",
       "unicode_decimal": 58973
     },
@@ -273,15 +266,15 @@
     },
     {
       "icon_id": "38587507",
-      "name": "sleepstate",
-      "font_class": "sleepstate",
+      "name": "sleep",
+      "font_class": "sleep",
       "unicode": "e664",
       "unicode_decimal": 58980
     },
     {
       "icon_id": "38587508",
-      "name": "somke",
-      "font_class": "somke",
+      "name": "smoke",
+      "font_class": "smoke",
       "unicode": "e665",
       "unicode_decimal": 58981
     },
@@ -337,7 +330,7 @@
     {
       "icon_id": "38587516",
       "name": "pm",
-      "font_class": "pm1",
+      "font_class": "pm",
       "unicode": "e66d",
       "unicode_decimal": 58989
     },
@@ -378,8 +371,8 @@
     },
     {
       "icon_id": "38587522",
-      "name": "waterlevel",
-      "font_class": "waterlevel",
+      "name": "water-level",
+      "font_class": "water-level",
       "unicode": "e673",
       "unicode_decimal": 58995
     },
@@ -406,8 +399,8 @@
     },
     {
       "icon_id": "38587526",
-      "name": "ultravioletrays",
-      "font_class": "ultravioletrays",
+      "name": "ultraviolet",
+      "font_class": "ultraviolet",
       "unicode": "e677",
       "unicode_decimal": 58999
     },

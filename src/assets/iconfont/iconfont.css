@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4375727 */
-  src: url('iconfont.woff2?t=1702712652263') format('woff2'),
-       url('iconfont.woff?t=1702712652263') format('woff'),
-       url('iconfont.ttf?t=1702712652263') format('truetype');
+  src: url('iconfont.woff2?t=1702734097660') format('woff2'),
+       url('iconfont.woff?t=1702734097660') format('woff'),
+       url('iconfont.ttf?t=1702734097660') format('truetype');
 }
 
 .iconfont {
@@ -93,16 +93,12 @@
   content: "\e651";
 }
 
-.icon-GSR:before {
+.icon-gsr:before {
   content: "\e652";
 }
 
 .icon-count:before {
   content: "\e653";
-}
-
-.icon-co2:before {
-  content: "\e654";
 }
 
 .icon-display:before {
@@ -129,7 +125,7 @@
   content: "\e65a";
 }
 
-.icon-phvalue:before {
+.icon-ph:before {
   content: "\e65b";
 }
 
@@ -137,7 +133,7 @@
   content: "\e65c";
 }
 
-.icon-pm:before {
+.icon-co2:before {
   content: "\e65d";
 }
 
@@ -165,11 +161,11 @@
   content: "\e663";
 }
 
-.icon-sleepstate:before {
+.icon-sleep:before {
   content: "\e664";
 }
 
-.icon-somke:before {
+.icon-smoke:before {
   content: "\e665";
 }
 
@@ -201,7 +197,7 @@
   content: "\e66c";
 }
 
-.icon-pm1:before {
+.icon-pm:before {
   content: "\e66d";
 }
 
@@ -225,7 +221,7 @@
   content: "\e672";
 }
 
-.icon-waterlevel:before {
+.icon-water-level:before {
   content: "\e673";
 }
 
@@ -241,7 +237,7 @@
   content: "\e676";
 }
 
-.icon-ultravioletrays:before {
+.icon-ultraviolet:before {
   content: "\e677";
 }
 
