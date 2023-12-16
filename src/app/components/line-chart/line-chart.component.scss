@@ -1,6 +1,6 @@
 .chart-box{
     height: 150px;
-    width: 100%;
+    width: calc(100% - 15px);
     border-radius: 10px;
     overflow: hidden;
     display: flex;

@@ -1,5 +1,6 @@
 @import "../page.scss";
 @import "../device-title.scss";
+
 .color-picker-box {
     margin-top: 50px;
     position: relative;
@@ -26,13 +27,22 @@
         max-height: 80px;
         border-radius: 50%;
         background: #FFF;
-        box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.11);
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.11);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3em;
+        cursor: pointer;
         color: #306CFF;
-        transition: all 0.1s;
+        transition: all 0.3s;
+
+        i {
+            font-size: 2.5em;
+        }
+
+        &.on {
+            color: #FFF;
+            background: #306CFF;
+        }
 
         &:active {
             transform: scale(0.92);

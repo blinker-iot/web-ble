@@ -399,8 +399,8 @@
     },
     {
       "icon_id": "38587525",
-      "name": "vibrateoinform",
-      "font_class": "vibrateoinform",
+      "name": "vibrate",
+      "font_class": "vibrate",
       "unicode": "e676",
       "unicode_decimal": 58998
     },

@@ -147,31 +147,31 @@ export const SMARTHOME_CONFIG = {
         unit: 'mg/m³',
         key: 'smoke',
         type: 'number'
-    },{
+    }, {
         name: '光照强度',
         icon: 'iconfont icon-sun',
         unit: 'LX',
         key: 'illuminance',
         type: 'number'
-    },{
+    }, {
         name: 'TVOC',
         icon: 'iconfont icon-tvoc',
         unit: 'mg/m³',
         key: 'tvoc',
         type: 'number'
-    },{
+    }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '氛围灯',
         icon: 'iconfont icon-illumination',
         key: 'illumination',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: 'LED智能灯',
         icon: 'iconfont icon-light',
         key: 'light',
@@ -207,37 +207,37 @@ export const SMARTFARMING_CONFIG = {
         unit: '℃',
         key: 'temperature',
         type: 'number'
-    },{
+    }, {
         name: '空气湿度',
         icon: 'iconfont icon-humidity',
         unit: '%',
         key: 'humidity',
         type: 'number'
-    },{
+    }, {
         name: '土壤湿度',
         icon: 'iconfont icon-soil_moisture',
         unit: '%',
         key: 'soil_moisture',
         type: 'number'
-    },{
+    }, {
         name: '光照强度',
         icon: 'iconfont icon-sun',
         unit: 'LX',
         key: 'illuminance',
         type: 'number'
-    },{
+    }, {
         name: 'CO2',
         icon: 'iconfont icon-co2',
         unit: 'ppm',
         key: 'co2',
         type: 'number'
-    },{
+    }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '补光灯',
         icon: 'iconfont icon-light',
         key: 'windSpeed',
@@ -256,7 +256,7 @@ export const SMARTFARMING_CONFIG = {
         key: 'fan',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '加热器',
         icon: 'iconfont icon-heater',
         key: 'heater',
@@ -298,7 +298,7 @@ export const WEATHERSTATION_CONFIG = {
         unit: '%',
         key: 'humidity',
         type: 'number'
-    },{
+    }, {
         name: '气压',
         icon: 'iconfont icon-pressure',
         unit: 'KPa',
@@ -317,13 +317,13 @@ export const WEATHERSTATION_CONFIG = {
         key: 'pm',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '语音播报',
         icon: 'iconfont icon-voiceplay',
         key: 'voiceplay',
@@ -364,7 +364,7 @@ export const HEALTH_CONFIG = {
         icon: 'iconfont icon-Sleepstate',
         key: 'slpstate',
         type: 'number'
-    },{
+    }, {
         name: '电导率',
         icon: 'iconfont icon-GSR',
         unit: 'μS',
@@ -373,20 +373,20 @@ export const HEALTH_CONFIG = {
     },
     {
         name: '震动提醒',
-        icon: 'iconfont icon-vibratetoinform',
+        icon: 'iconfont icon-vibrate',
         key: 'vibrate',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '屏幕提示',
         icon: 'iconfont icon-display',
-        key: 'hedisplay',
+        key: 'display',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '语音播报',
         icon: 'iconfont icon-voiceplay',
-        key: 'hevoice',
+        key: 'voice',
         state: false,
         type: 'switch'
     }]
@@ -425,7 +425,7 @@ export const ENVIRON_CONFIG = {
         unit: 'ppm',
         key: 'enair',
         type: 'number'
-    },{
+    }, {
         name: '噪音监测',
         icon: 'iconfont icon-noise',
         unit: 'db',
@@ -437,19 +437,19 @@ export const ENVIRON_CONFIG = {
         icon: 'iconfont icon-phvalue',
         key: 'phvalue',
         type: 'number'
-    },{
+    }, {
         name: '河道水位',
         icon: 'iconfont icon-waterlevel',
         unit: 'm',
         key: 'rwaterh',
         type: 'number'
-    },{
+    }, {
         name: '水质检测',
         icon: 'iconfont icon-tds',
         unit: 'mg/L',
         key: 'tds',
         type: 'number'
-    },{
+    }, {
         name: '紫外线',
         icon: 'iconfont icon-ultravioletrays',
         unit: 'w/㎡',
@@ -461,7 +461,7 @@ export const ENVIRON_CONFIG = {
         key: 'endisplay',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '语音播报',
         icon: 'iconfont icon-voiceplay',
         key: 'envoice',
@@ -503,7 +503,7 @@ export const INDUSTRY_CONFIG = {
         key: 'colour',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '重量',
         icon: 'iconfont icon-weight',
         unit: 'kg',
@@ -515,13 +515,13 @@ export const INDUSTRY_CONFIG = {
         icon: 'iconfont icon-count',
         key: 'count',
         type: 'number'
-    },{
+    }, {
         name: '身份信息',
         icon: 'iconfont icon-idinf',
         key: 'idinf',
         state: false,
         type: 'input'
-    },{
+    }, {
         name: '屏幕显示',
         icon: 'iconfont icon-display',
         key: 'inddisplay',
@@ -533,25 +533,25 @@ export const INDUSTRY_CONFIG = {
         key: 'indvoice',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '继电器1',
         icon: 'iconfont icon-relay1',
         key: 'relay1',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '继电器2',
         icon: 'iconfont icon-relay2',
         key: 'relay2',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '继电器3',
         icon: 'iconfont icon-relay3',
         key: 'relay3',
         state: false,
         type: 'switch'
-    },{
+    }, {
         name: '继电器4',
         icon: 'iconfont icon-relay4',
         key: 'relay4',

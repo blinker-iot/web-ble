@@ -40,4 +40,8 @@ export class SettingBtnComponent {
   turnMenu() {
     this.hideMenu = !this.hideMenu;
   }
+
+  onClick() {
+    this.hideMenu = false
+  }
 }

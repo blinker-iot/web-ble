@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4375727 */
-  src: url('iconfont.woff2?t=1702711846495') format('woff2'),
-       url('iconfont.woff?t=1702711846495') format('woff'),
-       url('iconfont.ttf?t=1702711846495') format('truetype');
+  src: url('iconfont.woff2?t=1702712652263') format('woff2'),
+       url('iconfont.woff?t=1702712652263') format('woff'),
+       url('iconfont.ttf?t=1702712652263') format('truetype');
 }
 
 .iconfont {
@@ -237,7 +237,7 @@
   content: "\e675";
 }
 
-.icon-vibrateoinform:before {
+.icon-vibrate:before {
   content: "\e676";
 }
 
