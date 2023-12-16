@@ -1,233 +1,436 @@
 {
-  "id": "",
-  "name": "",
+  "id": "4375727",
+  "name": "web-ble",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "1492012",
-      "name": "home_light",
-      "font_class": "home_light",
-      "unicode": "e7d4",
-      "unicode_decimal": 59348
-    },
-    {
-      "icon_id": "11992258",
-      "name": "bluetooth",
-      "font_class": "bluetooth",
-      "unicode": "e633",
-      "unicode_decimal": 58931
-    },
-    {
-      "icon_id": "34207455",
-      "name": "字母",
-      "font_class": "zimu",
-      "unicode": "e8ca",
-      "unicode_decimal": 59594
-    },
-    {
-      "icon_id": "38286426",
-      "name": "wind-direction",
-      "font_class": "wind-direction",
-      "unicode": "e643",
-      "unicode_decimal": 58947
-    },
-    {
-      "icon_id": "38286427",
-      "name": "humidity",
-      "font_class": "humidity",
-      "unicode": "e644",
-      "unicode_decimal": 58948
-    },
-    {
-      "icon_id": "38286428",
-      "name": "joystick",
-      "font_class": "joystick",
-      "unicode": "e645",
-      "unicode_decimal": 58949
-    },
-    {
-      "icon_id": "38286430",
-      "name": "pressure",
-      "font_class": "pressure",
-      "unicode": "e646",
-      "unicode_decimal": 58950
-    },
-    {
-      "icon_id": "38286431",
-      "name": "smarthome",
-      "font_class": "smarthome",
-      "unicode": "e647",
-      "unicode_decimal": 58951
-    },
-    {
-      "icon_id": "38286432",
-      "name": "wind-speed",
-      "font_class": "wind-speed",
-      "unicode": "e648",
-      "unicode_decimal": 58952
-    },
-    {
-      "icon_id": "38286433",
-      "name": "temperature",
-      "font_class": "temperature",
-      "unicode": "e649",
-      "unicode_decimal": 58953
-    },
-    {
-      "icon_id": "38286434",
-      "name": "rainfall",
-      "font_class": "rainfall",
-      "unicode": "e64a",
-      "unicode_decimal": 58954
-    },
-    {
-      "icon_id": "38286435",
-      "name": "co2",
-      "font_class": "co2",
-      "unicode": "e64b",
-      "unicode_decimal": 58955
-    },
-    {
-      "icon_id": "38286436",
-      "name": "fan",
-      "font_class": "fan",
-      "unicode": "e64c",
-      "unicode_decimal": 58956
-    },
-    {
-      "icon_id": "38286437",
-      "name": "light",
-      "font_class": "light",
-      "unicode": "e64d",
-      "unicode_decimal": 58957
-    },
-    {
-      "icon_id": "38286438",
-      "name": "light2",
-      "font_class": "light2",
-      "unicode": "e64e",
-      "unicode_decimal": 58958
-    },
-    {
-      "icon_id": "38286439",
-      "name": "pipe",
-      "font_class": "pipe",
-      "unicode": "e64f",
-      "unicode_decimal": 58959
-    },
-    {
-      "icon_id": "38286440",
-      "name": "door",
-      "font_class": "door",
-      "unicode": "e650",
-      "unicode_decimal": 58960
-    },
-    {
-      "icon_id": "38286441",
-      "name": "water",
-      "font_class": "water",
-      "unicode": "e651",
-      "unicode_decimal": 58961
-    },
-    {
-      "icon_id": "38286442",
-      "name": "setting",
-      "font_class": "setting",
-      "unicode": "e652",
-      "unicode_decimal": 58962
-    },
-    {
-      "icon_id": "38286443",
-      "name": "sun",
-      "font_class": "sun",
-      "unicode": "e653",
-      "unicode_decimal": 58963
-    },
-    {
-      "icon_id": "38286444",
-      "name": "farming",
-      "font_class": "farming",
-      "unicode": "e654",
-      "unicode_decimal": 58964
-    },
-    {
-      "icon_id": "38286445",
-      "name": "windmill",
-      "font_class": "windmill",
-      "unicode": "e655",
-      "unicode_decimal": 58965
-    },
-    {
-      "icon_id": "38286446",
-      "name": "pm",
-      "font_class": "pm",
-      "unicode": "e656",
-      "unicode_decimal": 58966
-    },
-    {
-      "icon_id": "38286447",
-      "name": "curtain",
-      "font_class": "curtain",
-      "unicode": "e657",
-      "unicode_decimal": 58967
-    },
-    {
-      "icon_id": "38286448",
-      "name": "music",
-      "font_class": "music",
-      "unicode": "e658",
-      "unicode_decimal": 58968
-    },
-    {
       "icon_id": "38567626",
       "name": "play",
       "font_class": "play",
-      "unicode": "e659",
-      "unicode_decimal": 58969
+      "unicode": "e67b",
+      "unicode_decimal": 59003
     },
     {
       "icon_id": "38567627",
       "name": "v",
       "font_class": "v",
-      "unicode": "e65a",
-      "unicode_decimal": 58970
+      "unicode": "e67c",
+      "unicode_decimal": 59004
     },
     {
       "icon_id": "38567628",
       "name": "v-",
       "font_class": "v-",
-      "unicode": "e65b",
-      "unicode_decimal": 58971
+      "unicode": "e67d",
+      "unicode_decimal": 59005
     },
     {
       "icon_id": "38567629",
       "name": "up",
       "font_class": "up",
-      "unicode": "e65c",
-      "unicode_decimal": 58972
+      "unicode": "e67e",
+      "unicode_decimal": 59006
     },
     {
       "icon_id": "38567630",
-      "name": "exit",
-      "font_class": "exit",
-      "unicode": "e65d",
-      "unicode_decimal": 58973
+      "name": "switch",
+      "font_class": "switch",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "38286428",
+      "name": "joystick",
+      "font_class": "joystick",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "38286431",
+      "name": "smarthome",
+      "font_class": "smarthome",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "38286436",
+      "name": "fan",
+      "font_class": "fan",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "38286437",
+      "name": "light",
+      "font_class": "light",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "38286438",
+      "name": "light2",
+      "font_class": "light2",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "38286439",
+      "name": "pipe",
+      "font_class": "pipe",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "38286440",
+      "name": "door",
+      "font_class": "door",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "38286441",
+      "name": "water",
+      "font_class": "water",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "38286442",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "38286444",
+      "name": "farming",
+      "font_class": "farming",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "38286445",
+      "name": "windmill",
+      "font_class": "windmill",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "38286447",
+      "name": "curtain",
+      "font_class": "curtain",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
     },
     {
       "icon_id": "38567631",
       "name": "remote-control",
       "font_class": "remote-control",
-      "unicode": "e65e",
-      "unicode_decimal": 58974
+      "unicode": "e64f",
+      "unicode_decimal": 58959
     },
     {
       "icon_id": "38567632",
       "name": "weather-station",
       "font_class": "weather-station",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "38587488",
+      "name": "current",
+      "font_class": "current",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "38587489",
+      "name": "GSR",
+      "font_class": "GSR",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "38587490",
+      "name": "count",
+      "font_class": "count",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "38587491",
+      "name": "co2",
+      "font_class": "co2",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "38587492",
+      "name": "display",
+      "font_class": "display",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "38587493",
+      "name": "color",
+      "font_class": "color",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "38587494",
+      "name": "humidity",
+      "font_class": "humidity",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "38587495",
+      "name": "idinf",
+      "font_class": "idinf",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "38587496",
+      "name": "fan",
+      "font_class": "fan1",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "38587497",
+      "name": "light",
+      "font_class": "light1",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "38587498",
+      "name": "phvalue",
+      "font_class": "phvalue",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "38587499",
+      "name": "illumination",
+      "font_class": "illumination",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "38587500",
+      "name": "pm",
+      "font_class": "pm",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "38587501",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "38587502",
+      "name": "bloodpressure",
+      "font_class": "bloodpressure",
       "unicode": "e65f",
       "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "38587503",
+      "name": "pressure",
+      "font_class": "pressure",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "38587504",
+      "name": "heartrate",
+      "font_class": "heartrate",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "38587505",
+      "name": "bodytemperature",
+      "font_class": "bodytemperature",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "38587506",
+      "name": "soil_moisture",
+      "font_class": "soil_moisture",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "38587507",
+      "name": "sleepstate",
+      "font_class": "sleepstate",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "38587508",
+      "name": "somke",
+      "font_class": "somke",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "38587509",
+      "name": "heater",
+      "font_class": "heater",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "38587510",
+      "name": "voiceplay",
+      "font_class": "voiceplay",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "38587511",
+      "name": "bloodoxygen",
+      "font_class": "bloodoxygen",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "38587512",
+      "name": "relay",
+      "font_class": "relay",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "38587513",
+      "name": "temperature",
+      "font_class": "temperature",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "38587514",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "38587515",
+      "name": "power",
+      "font_class": "power",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "38587516",
+      "name": "pm",
+      "font_class": "pm1",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "38587517",
+      "name": "voltage",
+      "font_class": "voltage",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "38587518",
+      "name": "wind-direction",
+      "font_class": "wind-direction",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "38587519",
+      "name": "rainfall",
+      "font_class": "rainfall",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "38587520",
+      "name": "waterpump",
+      "font_class": "waterpump",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "38587521",
+      "name": "wind-speed",
+      "font_class": "wind-speed",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "38587522",
+      "name": "waterlevel",
+      "font_class": "waterlevel",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "38587523",
+      "name": "noise",
+      "font_class": "noise",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "38587524",
+      "name": "weight",
+      "font_class": "weight",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "38587525",
+      "name": "vibrateoinform",
+      "font_class": "vibrateoinform",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "38587526",
+      "name": "ultravioletrays",
+      "font_class": "ultravioletrays",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "38593484",
+      "name": "environment",
+      "font_class": "environment",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "38593485",
+      "name": "industry",
+      "font_class": "industry",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "38593486",
+      "name": "health",
+      "font_class": "health",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
     }
   ]
 }

@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1702560770149') format('truetype');
+  font-family: "iconfont"; /* Project id 4375727 */
+  src: url('iconfont.woff2?t=1702711846495') format('woff2'),
+       url('iconfont.woff?t=1702711846495') format('woff'),
+       url('iconfont.ttf?t=1702711846495') format('truetype');
 }
 
 .iconfont {
@@ -11,131 +13,247 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home_light:before {
-  content: "\e7d4";
-}
-
-.icon-bluetooth:before {
-  content: "\e633";
-}
-
-.icon-zimu:before {
-  content: "\e8ca";
-}
-
-.icon-wind-direction:before {
-  content: "\e643";
-}
-
-.icon-humidity:before {
-  content: "\e644";
-}
-
-.icon-joystick:before {
-  content: "\e645";
-}
-
-.icon-pressure:before {
-  content: "\e646";
-}
-
-.icon-smarthome:before {
-  content: "\e647";
-}
-
-.icon-wind-speed:before {
-  content: "\e648";
-}
-
-.icon-temperature:before {
-  content: "\e649";
-}
-
-.icon-rainfall:before {
-  content: "\e64a";
-}
-
-.icon-co2:before {
-  content: "\e64b";
-}
-
-.icon-fan:before {
-  content: "\e64c";
-}
-
-.icon-light:before {
-  content: "\e64d";
-}
-
-.icon-light2:before {
-  content: "\e64e";
-}
-
-.icon-pipe:before {
-  content: "\e64f";
-}
-
-.icon-door:before {
-  content: "\e650";
-}
-
-.icon-water:before {
-  content: "\e651";
-}
-
-.icon-setting:before {
-  content: "\e652";
-}
-
-.icon-sun:before {
-  content: "\e653";
-}
-
-.icon-farming:before {
-  content: "\e654";
-}
-
-.icon-windmill:before {
-  content: "\e655";
-}
-
-.icon-pm:before {
-  content: "\e656";
-}
-
-.icon-curtain:before {
-  content: "\e657";
-}
-
-.icon-music:before {
-  content: "\e658";
-}
-
 .icon-play:before {
-  content: "\e659";
+  content: "\e67b";
 }
 
 .icon-v:before {
-  content: "\e65a";
+  content: "\e67c";
 }
 
 .icon-v-:before {
-  content: "\e65b";
+  content: "\e67d";
 }
 
 .icon-up:before {
-  content: "\e65c";
+  content: "\e67e";
 }
 
-.icon-exit:before {
-  content: "\e65d";
+.icon-switch:before {
+  content: "\e67f";
+}
+
+.icon-joystick:before {
+  content: "\e643";
+}
+
+.icon-smarthome:before {
+  content: "\e644";
+}
+
+.icon-fan:before {
+  content: "\e645";
+}
+
+.icon-light:before {
+  content: "\e646";
+}
+
+.icon-light2:before {
+  content: "\e647";
+}
+
+.icon-pipe:before {
+  content: "\e648";
+}
+
+.icon-door:before {
+  content: "\e649";
+}
+
+.icon-water:before {
+  content: "\e64a";
+}
+
+.icon-setting:before {
+  content: "\e64b";
+}
+
+.icon-farming:before {
+  content: "\e64c";
+}
+
+.icon-windmill:before {
+  content: "\e64d";
+}
+
+.icon-curtain:before {
+  content: "\e64e";
 }
 
 .icon-remote-control:before {
-  content: "\e65e";
+  content: "\e64f";
 }
 
 .icon-weather-station:before {
+  content: "\e650";
+}
+
+.icon-current:before {
+  content: "\e651";
+}
+
+.icon-GSR:before {
+  content: "\e652";
+}
+
+.icon-count:before {
+  content: "\e653";
+}
+
+.icon-co2:before {
+  content: "\e654";
+}
+
+.icon-display:before {
+  content: "\e655";
+}
+
+.icon-color:before {
+  content: "\e656";
+}
+
+.icon-humidity:before {
+  content: "\e657";
+}
+
+.icon-idinf:before {
+  content: "\e658";
+}
+
+.icon-fan1:before {
+  content: "\e659";
+}
+
+.icon-light1:before {
+  content: "\e65a";
+}
+
+.icon-phvalue:before {
+  content: "\e65b";
+}
+
+.icon-illumination:before {
+  content: "\e65c";
+}
+
+.icon-pm:before {
+  content: "\e65d";
+}
+
+.icon-music:before {
+  content: "\e65e";
+}
+
+.icon-bloodpressure:before {
   content: "\e65f";
+}
+
+.icon-pressure:before {
+  content: "\e660";
+}
+
+.icon-heartrate:before {
+  content: "\e661";
+}
+
+.icon-bodytemperature:before {
+  content: "\e662";
+}
+
+.icon-soil_moisture:before {
+  content: "\e663";
+}
+
+.icon-sleepstate:before {
+  content: "\e664";
+}
+
+.icon-somke:before {
+  content: "\e665";
+}
+
+.icon-heater:before {
+  content: "\e666";
+}
+
+.icon-voiceplay:before {
+  content: "\e667";
+}
+
+.icon-bloodoxygen:before {
+  content: "\e668";
+}
+
+.icon-relay:before {
+  content: "\e669";
+}
+
+.icon-temperature:before {
+  content: "\e66a";
+}
+
+.icon-sun:before {
+  content: "\e66b";
+}
+
+.icon-power:before {
+  content: "\e66c";
+}
+
+.icon-pm1:before {
+  content: "\e66d";
+}
+
+.icon-voltage:before {
+  content: "\e66e";
+}
+
+.icon-wind-direction:before {
+  content: "\e66f";
+}
+
+.icon-rainfall:before {
+  content: "\e670";
+}
+
+.icon-waterpump:before {
+  content: "\e671";
+}
+
+.icon-wind-speed:before {
+  content: "\e672";
+}
+
+.icon-waterlevel:before {
+  content: "\e673";
+}
+
+.icon-noise:before {
+  content: "\e674";
+}
+
+.icon-weight:before {
+  content: "\e675";
+}
+
+.icon-vibrateoinform:before {
+  content: "\e676";
+}
+
+.icon-ultravioletrays:before {
+  content: "\e677";
+}
+
+.icon-environment:before {
+  content: "\e678";
+}
+
+.icon-industry:before {
+  content: "\e679";
+}
+
+.icon-health:before {
+  content: "\e67a";
 }
 

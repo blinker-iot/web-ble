@@ -23,9 +23,11 @@
     .text {
         display: flex;
         align-items: center;
+        transition: all 0.5s;
         i {
             margin-right: 6px;
             font-size: 22px;
+            transition: all 0.5s;
         }
     }
 
@@ -50,6 +52,7 @@
         border-radius: 10px;
         overflow: hidden;
         background: rgba(238, 238, 238, 0.5);
+        transition: background-color 0.5s;
         position: relative;
 
         .activebar {
