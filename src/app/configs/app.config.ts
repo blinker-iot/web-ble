@@ -31,18 +31,18 @@ export const MENU = [
     },
     {
         name: '健康监测',
-        icon: 'smarthome',
-        link: '/iot/smarthome'
+        icon: 'health',
+        link: '/iot/health'
     },
     {
-        name: '环境检测',
-        icon: 'farming',
-        link: '/iot/farming'
+        name: '环境监测',
+        icon: 'environment',
+        link: '/iot/environment'
     },
     {
         name: '工业自动化',
-        icon: 'weather-station',
-        link: '/iot/weather'
+        icon: 'industry',
+        link: '/iot/industry'
     },
     {
         name: '首页',

@@ -7,7 +7,7 @@ import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 import { BleService } from '../../ble.service';
 import { InputBoxComponent } from '../../components/input-box/input-box.component';
 import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
-import { FARMING_CONFIG, SMARTHOME_CONFIG, WEATHER_CONFIG } from '../../configs/device.confit';
+import { ENVIRON_CONFIG, HEALTH_CONFIG, INDUSTRY_CONFIG, SMARTFARMING_CONFIG, SMARTHOME_CONFIG, WEATHERSTATION_CONFIG } from '../../configs/device.confit';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -40,11 +40,23 @@ export class IotPageComponent {
         case 'smarthome':
           this.config = SMARTHOME_CONFIG
           break;
-        case 'farming':
-          this.config = FARMING_CONFIG
+        case 'smarthome':
+          this.config = SMARTHOME_CONFIG
           break;
         case 'weather':
-          this.config = WEATHER_CONFIG
+          this.config = WEATHERSTATION_CONFIG
+          break;
+        case 'farming':
+          this.config = SMARTFARMING_CONFIG
+          break;
+        case 'health':
+          this.config = HEALTH_CONFIG
+          break;
+        case 'environment':
+          this.config = ENVIRON_CONFIG
+          break;
+        case 'industry':
+          this.config = INDUSTRY_CONFIG
           break;
         default:
           break;
