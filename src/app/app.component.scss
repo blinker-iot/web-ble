@@ -18,6 +18,10 @@
     }
 }
 
+.add{
+    display: none;
+}
+
 
 @media screen and (min-width: 500px) {
     .phone-box {
@@ -51,5 +55,22 @@
         border: 1px solid red;
         width: 307px;
         height: 663px;
+    }
+
+    .add{
+        position: fixed;
+        top: 15px;
+        left: 400px;
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 260px;
+        }
+
+        .text{
+            text-align: center;
+            width: 100%;
+            padding: 15px 0;
+        }
     }
 }
