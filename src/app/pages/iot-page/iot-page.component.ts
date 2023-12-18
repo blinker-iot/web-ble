@@ -9,13 +9,13 @@ import { InputBoxComponent } from '../../components/input-box/input-box.componen
 import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
 import { ENVIRON_CONFIG, HEALTH_CONFIG, INDUSTRY_CONFIG, SMARTFARMING_CONFIG, SMARTHOME_CONFIG, WEATHERSTATION_CONFIG } from '../../configs/device.confit';
 import { ActivatedRoute } from '@angular/router';
+import { BtnBoxComponent } from '../../components/btn-box/btn-box.component';
 
 @Component({
   selector: 'iot-page',
   standalone: true,
   imports: [CommonModule, LineChartComponent, SettingBtnComponent, DataBoxComponent, CtrlBoxComponent,
-    InputBoxComponent,
-    DeviceTitleComponent],
+    InputBoxComponent, BtnBoxComponent, DeviceTitleComponent],
   templateUrl: './iot-page.component.html',
   styleUrl: './iot-page.component.scss'
 })
@@ -66,7 +66,11 @@ export class IotPageComponent {
       this.config.widgets.filter(item => item.type == 'number').forEach(item => {
         this.items1.push(item)
       })
-      this.config.widgets.filter(item => item.type == 'switch' || item.type === 'input').forEach(item => {
+      this.config.widgets.filter(item =>
+        item.type == 'switch' ||
+        item.type === 'input' ||
+        item.type === 'button'
+      ).forEach(item => {
         this.items3.push(item)
       })
       this.currentItem = this.items1[0]

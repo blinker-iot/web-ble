@@ -1,18 +1,19 @@
-<div class="ctrl-box" (click)="editText()">
+<div class="ctrl-box" (click)="trunCtrlItem()">
     <div class="left">
         <div>
-            <div class="icon-box">
+            <div class="icon-box" [ngClass]="{'on': state}">
                 <i class="{{config.icon}}"></i>
             </div>
             <div class="text-box">
                 <div class="name">{{config.name}}</div>
                 <div class="state">
-                    点击编辑
+                    点击执行
                 </div>
             </div>
         </div>
     </div>
     <div class="toggle">
-        <i class="fa-light fa-pen"></i>
+        <!-- <toggle [state]="state"></toggle> -->
+
     </div>
 </div>

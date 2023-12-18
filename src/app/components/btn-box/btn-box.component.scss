@@ -1,0 +1,50 @@
+.ctrl-box {
+    padding: 10px;
+}
+
+.icon-box {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D1D6E2;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    i {
+        font-size: 20px;
+        color: #FFF;
+    }
+
+    &.on {
+        background: #306CFF;
+    }
+}
+
+.toggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: scale(0.8);
+}
+
+.text-box {
+    margin-top: 3px;
+    width: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .name {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .state {
+        margin-top: 2px;
+        font-size: 10px;
+        color: #999999;
+    }
+}

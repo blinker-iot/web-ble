@@ -25,7 +25,10 @@
                     <ctrl-box [config]="item" (stateChange)="stateChange($event,item)"></ctrl-box>
                 </div>
                 <div class="ctrl-box" *ngIf="item.type=='input'">
-                    <input-box (textChange)="textChange($event)"></input-box>
+                    <input-box [config]="item"></input-box>
+                </div>
+                <div class="ctrl-box" *ngIf="item.type=='button'">
+                    <btn-box [config]="item"></btn-box>
                 </div>
             </ng-container>
         </div>

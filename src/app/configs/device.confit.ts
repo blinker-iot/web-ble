@@ -31,42 +31,44 @@ export const SMARTHOME_CONFIG = {
         unit: 'mg/m³',
         key: 'tvoc',
         type: 'number'
+    },
+    {
+        name: '照明',
+        icon: 'iconfont icon-light',
+        key: 'light',
+        state: false,
+        type: 'switch'
+    },
+    {
+        name: '氛围灯',
+        icon: 'iconfont icon-illumination',
+        key: 'light2',
+        state: false,
+        type: 'switch'
+    }, {
+        name: '风扇',
+        icon: 'iconfont icon-fan',
+        key: 'fan',
+        state: false,
+        type: 'switch'
+    }, {
+        name: '音乐',
+        icon: 'iconfont icon-music',
+        key: 'music',
+        state: false,
+        type: 'switch'
+    }, {
+        name: '语音播报',
+        icon: 'iconfont icon-voiceplay',
+        key: 'voice',
+        state: false,
+        type: 'button'
     }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    }, {
-        name: '氛围灯',
-        icon: 'iconfont icon-illumination',
-        key: 'illumination',
-        state: false,
-        type: 'switch'
-    }, {
-        name: 'LED智能灯',
-        icon: 'iconfont icon-light',
-        key: 'light',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '风速控制',
-        icon: 'iconfont icon-fan',
-        key: 'fan',
-        state: false,
-        type: 'switch'
-    }, {
-        name: 'MP3',
-        icon: 'iconfont icon-mp3',
-        key: 'mp3',
-        state: false,
-        type: 'switch'
-    }, {
-        name: '语音播报',
-        icon: 'iconfont icon-voiceplay',
-        key: 'voiceplay',
-        state: false,
-        type: 'switch'
     }]
 }
 
@@ -104,12 +106,6 @@ export const SMARTFARMING_CONFIG = {
         key: 'co2',
         type: 'number'
     }, {
-        name: '显示屏',
-        icon: 'iconfont icon-display',
-        key: 'display',
-        state: false,
-        type: 'input'
-    }, {
         name: '补光灯',
         icon: 'iconfont icon-light',
         key: 'windSpeed',
@@ -123,7 +119,7 @@ export const SMARTFARMING_CONFIG = {
         type: 'switch'
     },
     {
-        name: '风速控制',
+        name: '风扇',
         icon: 'iconfont icon-fan',
         key: 'fan',
         state: false,
@@ -134,6 +130,12 @@ export const SMARTFARMING_CONFIG = {
         key: 'heater',
         state: false,
         type: 'switch'
+    }, {
+        name: '显示屏',
+        icon: 'iconfont icon-display',
+        key: 'display',
+        state: false,
+        type: 'input'
     }]
 }
 
@@ -190,17 +192,17 @@ export const WEATHERSTATION_CONFIG = {
         state: false,
         type: 'number'
     }, {
+        name: '语音播报',
+        icon: 'iconfont icon-voiceplay',
+        key: 'voice',
+        state: false,
+        type: 'button'
+    }, {
         name: '显示屏',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    }, {
-        name: '语音播报',
-        icon: 'iconfont icon-voiceplay',
-        key: 'voiceplay',
-        state: false,
-        type: 'switch'
     }]
 }
 
@@ -242,25 +244,24 @@ export const HEALTH_CONFIG = {
         unit: 'μS',
         key: 'gsr',
         type: 'number'
-    },
-    {
+    }, {
         name: '震动提醒',
         icon: 'iconfont icon-vibrate',
         key: 'vibrate',
         state: false,
-        type: 'switch'
+        type: 'button'
+    }, {
+        name: '语音播报',
+        icon: 'iconfont icon-voiceplay',
+        key: 'voice',
+        state: false,
+        type: 'button'
     }, {
         name: '屏幕提示',
         icon: 'iconfont icon-display',
         key: 'display',
         state: false,
         type: 'input'
-    }, {
-        name: '语音播报',
-        icon: 'iconfont icon-voiceplay',
-        key: 'voice',
-        state: false,
-        type: 'switch'
     }]
 }
 
