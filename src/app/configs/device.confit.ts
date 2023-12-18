@@ -339,7 +339,7 @@ export const ENVIRON_CONFIG = {
         icon: 'iconfont icon-voiceplay',
         key: 'voice',
         state: false,
-        type: 'switch'
+        type: 'button'
     }]
 }
 
@@ -368,12 +368,12 @@ export const INDUSTRY_CONFIG = {
             name: '功率',
             icon: 'iconfont icon-power',
             unit: 'W',
-            key: 'powerp',
+            key: 'power',
             type: 'number'
         }, {
             name: '颜色',
             icon: 'iconfont icon-color',
-            key: 'colour',
+            key: 'color',
             type: 'number'
         }, {
             name: '重量',
@@ -390,13 +390,13 @@ export const INDUSTRY_CONFIG = {
         }, {
             name: '身份信息',
             icon: 'iconfont icon-idinf',
-            key: 'idinf',
+            key: 'id',
             state: false,
             type: 'input'
         }, {
             name: '屏幕显示',
             icon: 'iconfont icon-display',
-            key: 'inddisplay',
+            key: 'display',
             state: false,
             type: 'input'
         }, {
