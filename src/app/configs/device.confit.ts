@@ -14,7 +14,7 @@ export const SMARTHOME_CONFIG = {
         key: 'humidity',
         type: 'number'
     }, {
-        name: '烟雾传感器',
+        name: '烟雾浓度',
         icon: 'iconfont icon-smoke',
         unit: 'mg/m³',
         key: 'smoke',
@@ -386,7 +386,7 @@ export const INDUSTRY_CONFIG = {
             key: 'power',
             type: 'number'
         }, {
-            name: '颜色',
+            name: '颜色信息',
             icon: 'iconfont icon-rgb',
             key: 'color',
             type: 'number'
