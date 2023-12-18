@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4375727 */
-  src: url('iconfont.woff2?t=1702734097660') format('woff2'),
-       url('iconfont.woff?t=1702734097660') format('woff'),
-       url('iconfont.ttf?t=1702734097660') format('truetype');
+  src: url('iconfont.woff2?t=1702892638955') format('woff2'),
+       url('iconfont.woff?t=1702892638955') format('woff'),
+       url('iconfont.ttf?t=1702892638955') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,70 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vibrate:before {
+  content: "\e654";
+}
+
+.icon-rgb:before {
+  content: "\e655";
+}
+
+.icon-home_light:before {
+  content: "\e7d4";
+}
+
+.icon-display:before {
+  content: "\e6be";
+}
+
+.icon-do:before {
+  content: "\e6bf";
+}
+
+.icon-heater:before {
+  content: "\e6c1";
+}
+
+.icon-light3:before {
+  content: "\e6c2";
+}
+
+.icon-return:before {
+  content: "\e6c4";
+}
+
+.icon-v-2:before {
+  content: "\e6c5";
+}
+
+.icon-edit:before {
+  content: "\e6c6";
+}
+
+.icon-pressure:before {
+  content: "\e6c7";
+}
+
+.icon-id:before {
+  content: "\e6c8";
+}
+
+.icon-windmill2:before {
+  content: "\e6ca";
+}
+
+.icon-a-v:before {
+  content: "\e6cb";
+}
+
+.icon-other:before {
+  content: "\e6cc";
+}
+
+.icon-switch1:before {
+  content: "\e6cd";
 }
 
 .icon-play:before {
@@ -101,10 +165,6 @@
   content: "\e653";
 }
 
-.icon-display:before {
-  content: "\e655";
-}
-
 .icon-color:before {
   content: "\e656";
 }
@@ -113,16 +173,8 @@
   content: "\e657";
 }
 
-.icon-idinf:before {
-  content: "\e658";
-}
-
 .icon-fan1:before {
   content: "\e659";
-}
-
-.icon-light1:before {
-  content: "\e65a";
 }
 
 .icon-ph:before {
@@ -145,10 +197,6 @@
   content: "\e65f";
 }
 
-.icon-pressure:before {
-  content: "\e660";
-}
-
 .icon-heartrate:before {
   content: "\e661";
 }
@@ -169,20 +217,12 @@
   content: "\e665";
 }
 
-.icon-heater:before {
-  content: "\e666";
-}
-
 .icon-voiceplay:before {
   content: "\e667";
 }
 
 .icon-bloodoxygen:before {
   content: "\e668";
-}
-
-.icon-relay:before {
-  content: "\e669";
 }
 
 .icon-temperature:before {
@@ -231,10 +271,6 @@
 
 .icon-weight:before {
   content: "\e675";
-}
-
-.icon-vibrate:before {
-  content: "\e676";
 }
 
 .icon-ultraviolet:before {

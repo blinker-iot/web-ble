@@ -6,6 +6,118 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "38612481",
+      "name": "vibrate",
+      "font_class": "vibrate",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "38612490",
+      "name": "rgb",
+      "font_class": "rgb",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "1492012",
+      "name": "home_light",
+      "font_class": "home_light",
+      "unicode": "e7d4",
+      "unicode_decimal": 59348
+    },
+    {
+      "icon_id": "38611481",
+      "name": "display",
+      "font_class": "display",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "38611482",
+      "name": "do",
+      "font_class": "do",
+      "unicode": "e6bf",
+      "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "38611485",
+      "name": "heater",
+      "font_class": "heater",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "38611487",
+      "name": "light3",
+      "font_class": "light3",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "38611491",
+      "name": "return",
+      "font_class": "return",
+      "unicode": "e6c4",
+      "unicode_decimal": 59076
+    },
+    {
+      "icon_id": "38611492",
+      "name": "v-",
+      "font_class": "v-2",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "38611493",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "38611496",
+      "name": "pressure",
+      "font_class": "pressure",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "38611498",
+      "name": "id",
+      "font_class": "id",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "38611505",
+      "name": "windmill",
+      "font_class": "windmill2",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "38611506",
+      "name": "v+",
+      "font_class": "a-v",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    },
+    {
+      "icon_id": "38611507",
+      "name": "other",
+      "font_class": "other",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "38611508",
+      "name": "switch1",
+      "font_class": "switch1",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
       "icon_id": "38567626",
       "name": "play",
       "font_class": "play",
@@ -160,13 +272,6 @@
       "unicode_decimal": 58963
     },
     {
-      "icon_id": "38587492",
-      "name": "display",
-      "font_class": "display",
-      "unicode": "e655",
-      "unicode_decimal": 58965
-    },
-    {
       "icon_id": "38587493",
       "name": "color",
       "font_class": "color",
@@ -181,25 +286,11 @@
       "unicode_decimal": 58967
     },
     {
-      "icon_id": "38587495",
-      "name": "idinf",
-      "font_class": "idinf",
-      "unicode": "e658",
-      "unicode_decimal": 58968
-    },
-    {
       "icon_id": "38587496",
       "name": "fan",
       "font_class": "fan1",
       "unicode": "e659",
       "unicode_decimal": 58969
-    },
-    {
-      "icon_id": "38587497",
-      "name": "light",
-      "font_class": "light1",
-      "unicode": "e65a",
-      "unicode_decimal": 58970
     },
     {
       "icon_id": "38587498",
@@ -237,13 +328,6 @@
       "unicode_decimal": 58975
     },
     {
-      "icon_id": "38587503",
-      "name": "pressure",
-      "font_class": "pressure",
-      "unicode": "e660",
-      "unicode_decimal": 58976
-    },
-    {
       "icon_id": "38587504",
       "name": "heartrate",
       "font_class": "heartrate",
@@ -279,13 +363,6 @@
       "unicode_decimal": 58981
     },
     {
-      "icon_id": "38587509",
-      "name": "heater",
-      "font_class": "heater",
-      "unicode": "e666",
-      "unicode_decimal": 58982
-    },
-    {
       "icon_id": "38587510",
       "name": "voiceplay",
       "font_class": "voiceplay",
@@ -298,13 +375,6 @@
       "font_class": "bloodoxygen",
       "unicode": "e668",
       "unicode_decimal": 58984
-    },
-    {
-      "icon_id": "38587512",
-      "name": "relay",
-      "font_class": "relay",
-      "unicode": "e669",
-      "unicode_decimal": 58985
     },
     {
       "icon_id": "38587513",
@@ -389,13 +459,6 @@
       "font_class": "weight",
       "unicode": "e675",
       "unicode_decimal": 58997
-    },
-    {
-      "icon_id": "38587525",
-      "name": "vibrate",
-      "font_class": "vibrate",
-      "unicode": "e676",
-      "unicode_decimal": 58998
     },
     {
       "icon_id": "38587526",

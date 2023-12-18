@@ -34,7 +34,7 @@ export const SMARTHOME_CONFIG = {
     },
     {
         name: '照明',
-        icon: 'iconfont icon-light',
+        icon: 'iconfont icon-light3',
         key: 'light',
         state: false,
         type: 'switch'
@@ -45,7 +45,22 @@ export const SMARTHOME_CONFIG = {
         key: 'light2',
         state: false,
         type: 'switch'
-    }, {
+    },
+    {
+        name: '门',
+        icon: 'iconfont icon-door',
+        key: 'door',
+        state: false,
+        type: 'switch'
+    },
+    {
+        name: '窗帘',
+        icon: 'iconfont icon-curtain',
+        key: 'curtain',
+        state: false,
+        type: 'switch'
+    },
+    {
         name: '风扇',
         icon: 'iconfont icon-fan',
         key: 'fan',
@@ -107,7 +122,7 @@ export const SMARTFARMING_CONFIG = {
         type: 'number'
     }, {
         name: '补光灯',
-        icon: 'iconfont icon-light',
+        icon: 'iconfont icon-light3',
         key: 'windSpeed',
         state: false,
         type: 'switch'
@@ -349,8 +364,8 @@ export const INDUSTRY_CONFIG = {
     widgets: [
         {
             name: '开关状态',
-            icon: 'iconfont icon-switchstate',
-            key: 'indonoff',
+            icon: 'iconfont icon-switch1',
+            key: 'switch',
             type: 'number'
         }, {
             name: '电流',
@@ -372,7 +387,7 @@ export const INDUSTRY_CONFIG = {
             type: 'number'
         }, {
             name: '颜色',
-            icon: 'iconfont icon-color',
+            icon: 'iconfont icon-rgb',
             key: 'color',
             type: 'number'
         }, {
@@ -389,7 +404,7 @@ export const INDUSTRY_CONFIG = {
             type: 'number'
         }, {
             name: '身份信息',
-            icon: 'iconfont icon-idinf',
+            icon: 'iconfont icon-id',
             key: 'id',
             state: false,
             type: 'input'
@@ -407,25 +422,25 @@ export const INDUSTRY_CONFIG = {
             type: 'switch'
         }, {
             name: '继电器1',
-            icon: 'iconfont icon-relay',
+            icon: 'iconfont icon-switch1',
             key: 'relay1',
             state: false,
             type: 'switch'
         }, {
             name: '继电器2',
-            icon: 'iconfont icon-relay',
+            icon: 'iconfont icon-switch1',
             key: 'relay2',
             state: false,
             type: 'switch'
         }, {
             name: '继电器3',
-            icon: 'iconfont icon-relay',
+            icon: 'iconfont icon-switch1',
             key: 'relay3',
             state: false,
             type: 'switch'
         }, {
             name: '继电器4',
-            icon: 'iconfont icon-relay',
+            icon: 'iconfont icon-switch1',
             key: 'relay4',
             state: false,
             type: 'switch'

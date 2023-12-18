@@ -11,15 +11,15 @@ import { ToggleComponent } from '../toggle/toggle.component';
 })
 export class BtnBoxComponent {
   @Input() config;
-  @Output() stateChange = new EventEmitter();
+  // @Output() stateChange = new EventEmitter();
 
   get state() {
     return this.config.state;
   }
 
-  trunCtrlItem() {
-    this.config.state = !this.config.state;
-    // this.stateChange.emit(this.config.state);
-  }
+  // trunCtrlItem() {
+  //   this.config.state = !this.config.state;
+  //   // this.stateChange.emit(this.config.state);
+  // }
 
 }

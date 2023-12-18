@@ -28,7 +28,7 @@
                     <input-box [config]="item"></input-box>
                 </div>
                 <div class="ctrl-box" *ngIf="item.type=='button'">
-                    <btn-box [config]="item"></btn-box>
+                    <btn-box [config]="item" (click)="onClick(item)"></btn-box>
                 </div>
             </ng-container>
         </div>

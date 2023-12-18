@@ -90,4 +90,8 @@ export class IotPageComponent {
   textChange(text) {
     this.bleService.sendData(`text:${text}\n`)
   }
+
+  onClick(item) {
+    this.bleService.sendData(`${item.key}:'tap'\n`)
+  }
 }
