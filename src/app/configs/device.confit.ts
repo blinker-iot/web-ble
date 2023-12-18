@@ -123,7 +123,7 @@ export const SMARTFARMING_CONFIG = {
     }, {
         name: '补光灯',
         icon: 'iconfont icon-light3',
-        key: 'windSpeed',
+        key: 'light',
         state: false,
         type: 'switch'
     }, {

@@ -28,9 +28,14 @@
     }
 }
 
-.text {
+.text-d {
     font-size: 12px;
     text-align: center;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .connect-btn {
@@ -58,6 +63,12 @@
         background: rgb(102, 176, 255);
         border: none;
         color: #FFF;
+        border-radius: 8px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
 
         &:hover {
             background: rgb(150, 200, 255);
@@ -66,38 +77,51 @@
 }
 
 .btn-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 11px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    font-size: 12px;
     margin-top: 15px;
+    position: relative;
 
-    >div {
+    .item {
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-        width: 33.33%;
-        margin-bottom: 15px;
+        flex-direction: column;
+        background: #FFF;
+        border-radius: 8px;
+        box-shadow: 0 0 5px #CCC;
+        padding: 8px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 5px #AAA;
+            background: #2581de;
+            color: #FFF;
+
+            i {
+                color: #FFF !important;
+            }
+        }
 
         .icon-box {
             height: 44px;
             width: 44px;
-            background: #FFF;
             margin-bottom: 7px;
-            box-shadow: 0 0 5px #CCC;
             border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
 
             i {
-                font-size: 30px;
+                font-size: 4em;
                 color: #2581de;
             }
 
         }
     }
+
 }
 
 .add {
