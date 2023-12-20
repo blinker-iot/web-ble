@@ -7,7 +7,7 @@ import { CtrlBoxComponent } from '../../components/ctrl-box/ctrl-box.component';
 import { BleService } from '../../ble.service';
 import { InputBoxComponent } from '../../components/input-box/input-box.component';
 import { DeviceTitleComponent } from '../../components/device-title/device-title.component';
-import { ENVIRON_CONFIG, HEALTH_CONFIG, INDUSTRY_CONFIG, SMARTFARMING_CONFIG, SMARTHOME_CONFIG, WEATHERSTATION_CONFIG } from '../../configs/device.confit';
+import { ENVIRON_CONFIG, HEALTH_CONFIG, INDUSTRY_CONFIG, SMARTFARMING_CONFIG, SMARTHOME_CONFIG, WEATHERSTATION_CONFIG } from '../../configs/device.config';
 import { ActivatedRoute } from '@angular/router';
 import { BtnBoxComponent } from '../../components/btn-box/btn-box.component';
 
