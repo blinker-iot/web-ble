@@ -287,13 +287,13 @@ export const ENVIRON_CONFIG = {
         name: '温度',
         icon: 'iconfont icon-temperature',
         unit: '℃',
-        key: 'entemp',
+        key: 'temperature',
         type: 'number'
     }, {
         name: '湿度',
         icon: 'iconfont icon-humidity',
         unit: '%',
-        key: 'humi',
+        key: 'humidity',
         type: 'number'
     }, {
         name: '气压',
