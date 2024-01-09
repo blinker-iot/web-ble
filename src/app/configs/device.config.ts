@@ -28,7 +28,7 @@ export const SMARTHOME_CONFIG = {
     }, {
         name: 'TVOC',
         icon: 'iconfont icon-pm',
-        unit: 'mg/m³',
+        unit: 'ppb',
         key: 'tvoc',
         type: 'number'
     },
