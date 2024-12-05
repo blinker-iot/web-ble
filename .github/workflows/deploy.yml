@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Use Node.js 18.x
+      - name: build
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
