@@ -27,10 +27,10 @@ jobs:
           npm run build
       
       - name: Deploy
-        uses: garygrossgarten/github-action-scp@v0.5.3
+        uses: Dylan700/sftp-upload-action@latest
         with:
-          local: dist/web-ble
-          remote: ${{ secrets.DEPLOY_DIR }}
-          host: ${{ secrets.DEPLOY_HOST }}
+          server: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
-          privateKey: ${{ secrets.DEPLOY_SECRET }}
+          key: ${{ secrets.DEPLOY_SECRET }}
+          uploads: |
+            dist/web-ble => ${{ secrets.DEPLOY_DIR }}
