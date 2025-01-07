@@ -12,7 +12,7 @@ export class BleService {
   device = null;
   server = null;
   characteristicInstance = null;
-  
+
   serviceUUID = '0000ffe0-0000-1000-8000-00805f9b34fb'
   characteristicUUID = '0000ffe1-0000-1000-8000-00805f9b34fb'
 
@@ -92,17 +92,20 @@ export class BleService {
 
     this.tempData += decodedValue;
 
-    // 检查是否存在'\n'
-    let lastIndex = this.tempData.lastIndexOf('\n');
-    if (lastIndex !== -1) {
-      // 获取最后一个'\n'前的数据并处理
-      let processData = this.tempData.substring(0, lastIndex);
-      this.dataService.processData(processData);
+    try {
+      // 检查是否存在'\n'
+      let lastIndex = this.tempData.lastIndexOf('\n');
+      if (lastIndex !== -1) {
+        // 获取最后一个'\n'前的数据并处理
+        let processData = this.tempData.substring(0, lastIndex);
+        this.dataService.processData(processData);
 
-      // 保留'\n'后的数据
-      this.tempData = this.tempData.substring(lastIndex + 1);
+        // 保留'\n'后的数据
+        this.tempData = this.tempData.substring(lastIndex + 1);
+      }
+    } catch (error) {
+
     }
-
     this.dataChanged.next(decodedValue);
   }
 

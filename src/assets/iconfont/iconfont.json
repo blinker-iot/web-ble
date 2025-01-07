@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "43063520",
+      "name": "ble",
+      "font_class": "ble",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
       "icon_id": "38612481",
       "name": "vibrate",
       "font_class": "vibrate",
