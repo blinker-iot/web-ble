@@ -1,0 +1,53 @@
+@import "../page.scss";
+
+.input-box {
+    height: 46px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+
+    input {
+        width: calc(100% - 115px);
+        border: none;
+        padding-left: 10px;
+        height: 40px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        width: 48px;
+        border: none;
+        border-radius: 8px;
+        margin-right: 3px;
+        background: rgb(18, 90, 223);
+        color: #FFF;
+        flex-shrink: 0;
+
+        &.clear{
+            right: 51px !important;
+            color: rgb(18, 90, 223);
+            background:transparent;
+        }
+    }
+}
+
+.r-box {
+    margin-top: 10px;
+    background: #FFF;
+    box-shadow: 0 0 5px 5px rgba(224, 224, 224, 0.5);
+    border-radius: 8px;
+    height: calc(100% - 115px);
+    padding: 10px;
+    overflow: auto;
+
+    .textzone {}
+}

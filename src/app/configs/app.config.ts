@@ -39,10 +39,15 @@ export const MENU = [
         icon: 'environment',
         link: '/iot/environment'
     },
+    // {
+    //     name: '工业自动化',
+    //     icon: 'industry',
+    //     link: '/iot/industry'
+    // },
     {
-        name: '工业自动化',
-        icon: 'industry',
-        link: '/iot/industry'
+        name: '蓝牙串口',
+        icon: 'ble',
+        link: '/serial'
     },
     {
         name: '首页',
