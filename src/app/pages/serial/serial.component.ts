@@ -4,6 +4,7 @@ import { DeviceTitleComponent } from '../../components/device-title/device-title
 import { BleService } from '../../ble.service';
 import { FormsModule } from '@angular/forms';
 import { HtmlPipe } from '../../pipes/html.pipe';
+import { SettingBtnComponent } from '../../components/setting-btn/setting-btn.component';
 
 @Component({
   selector: 'app-serial',
@@ -12,7 +13,8 @@ import { HtmlPipe } from '../../pipes/html.pipe';
     CommonModule,
     DeviceTitleComponent,
     FormsModule,
-    HtmlPipe
+    HtmlPipe,
+    SettingBtnComponent
   ],
   templateUrl: './serial.component.html',
   styleUrl: './serial.component.scss'
